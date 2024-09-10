@@ -1,0 +1,14 @@
+.fondo{
+    background-image: url("/assets/Fondo.png");
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+input {
+    background-color: transparent;
+}
+
+.input-transparente::placeholder{
+    color:white;
+    /* font-weight: ; */
+}
