@@ -57,7 +57,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "front-zyxbotV2:build:production"
+              "buildTarget": "front-zyxbotv2:build:production"
             },
             "development": {
               "buildTarget": "front-zyxbotV2:build:development"
