@@ -14,15 +14,33 @@
 			<!-- <p class="mt-2 text-sm text-gray-600">Please sign in to your account</p> -->
 		</div>
 		
-		<form class="mt-8 space-y-4" action="#" method="POST">
+		<form [formGroup]="loginForm" (ngSubmit)="ngsubmit()" class="mt-8 space-y-4" action="#">
             <div class="flex items-center border-2 py-3 px-3 rounded-2xl mb-4">
                 <i class="fa-solid fa-user text-white"></i>
-                <input class="input-transparente pl-2 text-white outline-none border-none" type="text" name="" id="" placeholder="Usuario" />
+                <input formControlName="email" class="input-transparente text-white pl-2 outline-none border-none" type="email" name="" id="" placeholder="Usuario" />
             </div>
+            <!-- <small
+            *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid"
+            class="text-red-500 text-xs font-medium ml-2">
+            Ingrese su correo
+            </small> -->
+            @if (hasEmailError()) {
+                <small class="text-red-500 text-xs font-medium ml-2">EL correo tiene que ser valido</small>
+            }
+
                 <div class="flex items-center border-2 py-3 px-3 rounded-2xl mb-4">
                     <i class="fa-solid fa-lock text-white"></i>
-                    <input class="input-transparente text-white pl-2 outline-none border-none" type="password" name="" id="" placeholder="Contraseña" />
+                    <input formControlName="password" class="input-transparente text-white pl-2 outline-none border-none" type="password" name="" id="" placeholder="Contraseña" />
                 </div>
+                <!-- @if (isRequired('password')) {
+                    <small>campo required</small>
+                } -->
+                <small
+                *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid"
+                class="text-red-500 text-xs font-medium ml-2">
+                Debe ser maximo de 8
+                </small>
+                
 			<div class="grid gap-3 mb-0 lg:grid-cols-1 mt-0">
 				<button type="submit" class="w-full flex justify-center py-3 bg-[#F6B93E] text-gray-100  uppercase  rounded-[15px] tracking-wide
                                 font-semibold  focus:outline-none focus:shadow-outline hover:bg-yellow-500 shadow-lg cursor-pointer transition ease-in duration-300">
@@ -43,10 +61,12 @@
                 <span class="text-white font-normal">¿Eres nuevo en ZyxBot?</span>
                 <span class="h-px md:w-24 sm:w-18 bg-white"></span>
             </div>
-            <button class="w-full flex justify-center border-2 py-3 text-white uppercase rounded-[15px] tracking-wide
+            <a routerLink="/auth/register">
+            <button  type="submit" class="w-full flex justify-center border-2 py-3 text-white uppercase rounded-[15px] tracking-wide
                 font-semibold focus:outline-none focus:shadow-outline hover:bg-[#00000050] shadow-lg cursor-pointer transition ease-in duration-300">
                 Ingresar
             </button>
+        </a>
         </div>
         </div>
 </section>
