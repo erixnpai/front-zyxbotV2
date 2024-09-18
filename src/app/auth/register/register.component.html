@@ -1,0 +1,70 @@
+<!-- component -->
+<section class="relative min-h-screen flex  justify-center py-12 px-4 sm:px-6 lg:px-8 bg-no-repeat bg-cover  items-center"
+	style="background-image: url(/assets/FondoLogin.png);">
+    <div class="absolute top-5 left-5 h-10 w-44 ml-0 mt-0">
+        <img src="/assets/LogoZyxBot.png" alt="Banner" />
+    </div>
+
+	<div class="absolute  inset-0 z-0"></div>
+	<div class="max-w-md w-full space-y-8 p-10 rounded-xl z-10">
+		<div class="text-center">
+			<h2 class="mt-6 uppercase text-4xl font-bold text-white">
+				Iniciar Sesión
+			</h2>
+			<!-- <p class="mt-2 text-sm text-gray-600">Please sign in to your account</p> -->
+		</div>
+		
+		<form [formGroup]="loginForm" (ngSubmit)="ngsubmit()" class="mt-8 space-y-4" action="#">
+            <div class="flex items-center border-2 py-3 px-3 rounded-2xl mb-4">
+                <i class="fa-solid fa-user text-white"></i>
+                <input formControlName="email" class="input-transparente text-white pl-2 outline-none border-none" type="email" name="" id="" placeholder="Usuario" />
+            </div>
+            <small
+            *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid"
+            class="text-red-500 text-xs font-medium ml-2">
+            Ingrese su correo
+            </small>
+            @if (hasEmailError()) {
+                <small>EL correo tiene que ser valido</small>
+            }
+            
+                <div class="flex items-center border-2 py-3 px-3 rounded-2xl mb-4">
+                    <i class="fa-solid fa-lock text-white"></i>
+                    <input formControlName="password" class="input-transparente text-white pl-2 outline-none border-none" type="password" name="" id="" placeholder="Contraseña" />
+                </div>
+                <!-- @if (isRequired('password')) {
+                    <small>campo required</small>
+                } -->
+                <small
+                *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid"
+                class="text-red-500 text-xs font-medium ml-2">
+                Ingrese una contraseña
+                </small>
+                
+			<div class="grid gap-3 mb-0 lg:grid-cols-1 mt-0">
+				<button type="submit" class="w-full flex justify-center py-3 bg-[#F6B93E] text-gray-100  uppercase  rounded-[15px] tracking-wide
+                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-yellow-500 shadow-lg cursor-pointer transition ease-in duration-300">
+                    Ingresar
+                </button>
+				<button type="submit" class="w-full flex justify-center bg-[#0B0F1D] py-3 text-gray-100  uppercase  rounded-[15px] tracking-wide
+                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-slate-800 shadow-lg cursor-pointer transition ease-in duration-300">
+                    Google
+                </button>
+			</div>
+			<p class="text-justify items-center justify-center text-lg text-white">
+				Al continuar, aceptas las <span class="text-[#4981C2] underline">condiciones de uso</span> y el <span class="text-[#4981C2] underline">aviso de privacidad</span> ZyxBot
+			</p>
+		</form>
+        <div class="grid gap-3 mb-0 lg:grid-cols-1 mt-0">
+            <div class="flex items-center justify-center space-x-1">
+                <span class="h-px md:w-24 sm:w-18 bg-white"></span>
+                <span class="text-white font-normal">¿Eres nuevo en ZyxBot?</span>
+                <span class="h-px md:w-24 sm:w-18 bg-white"></span>
+            </div>
+            <button type="submit" class="w-full flex justify-center border-2 py-3 text-white uppercase rounded-[15px] tracking-wide
+                font-semibold focus:outline-none focus:shadow-outline hover:bg-[#00000050] shadow-lg cursor-pointer transition ease-in duration-300">
+                Ingresar
+            </button>
+        </div>
+        </div>
+</section>

@@ -7,8 +7,7 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/homepage/homepage.component'),
     },
     {
-        path: 'login',
-        title: 'login',
-        loadComponent: () => import('./pages/login/login.component')
+        path: 'auth',
+        loadChildren: () => import('./auth/auth.routes')
     }
 ];
