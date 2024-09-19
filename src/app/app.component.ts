@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 import { NgxSonnerToaster } from 'ngx-sonner';
+import { AuthStateService } from './services/data-access/auth-state.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,12 @@ import { NgxSonnerToaster } from 'ngx-sonner';
 })
 export class AppComponent {
   title = 'front-zyxbotV2';
+  // constructor(private _auth: AuthStateService){}
+    private _auth = inject(AuthStateService);
+    private router = inject(Router);
+  async CerrarSesion() {
+    await this._auth.logOut();
+    this.router.navigateByUrl('/auth/login');
+  }
+
 }

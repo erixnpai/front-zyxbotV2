@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { privateGuard, publicGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     {
@@ -7,8 +8,14 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/homepage/homepage.component'),
     },
     {
+        canActivateChild: [publicGuard()],
         path: 'auth',
         loadChildren: () => import('./auth/auth.routes')
+    },
+    {
+        canActivateChild: [privateGuard()],
+        path: 'chat',
+        loadChildren: () => import('./pages/chat/chat.routes')
     },
     {
         path: '**',

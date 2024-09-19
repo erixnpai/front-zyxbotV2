@@ -31,6 +31,7 @@ export class LoginService {
 
   signGoogle(){
     const provider = new GoogleAuthProvider()
+    // provider.setCustomParameters({prompt: 'select_account'}) ESTO ES OPCIONAL YA QUE SIRVE PARA FORZAR PARA A ELEGIR UNA CUENTA DE GOOGLE
     return signInWithPopup(this._auth, provider)
   }
 }

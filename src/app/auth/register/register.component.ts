@@ -43,7 +43,7 @@ export default class RegisterComponent {
 
       await this.srvAuth.register({ email, password });
       toast.success('Usuario creado');
-      this.router.navigateByUrl('');
+      this.router.navigateByUrl('/chat/ichat');
     } catch (error) {
       toast.error('Error al crear usuario');
     }
@@ -58,7 +58,7 @@ export default class RegisterComponent {
       
       if (result) {
         toast.success('Usuario autenticado con Google');
-        this.router.navigateByUrl('');  // Redirige solo si la autenticación es exitosa.
+        this.router.navigateByUrl('/chat/ichat');  // Redirige solo si la autenticación es exitosa.
       } else {
         throw new Error('No se pudo completar la autenticación');
       }
