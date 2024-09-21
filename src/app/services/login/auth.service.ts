@@ -31,7 +31,16 @@ export class LoginService {
 
   signGoogle(){
     const provider = new GoogleAuthProvider()
-    // provider.setCustomParameters({prompt: 'select_account'}) ESTO ES OPCIONAL YA QUE SIRVE PARA FORZAR PARA A ELEGIR UNA CUENTA DE GOOGLE
+   // provider.setCustomParameters({prompt: 'select_account'}) // ESTO ES OPCIONAL YA QUE SIRVE PARA FORZAR PARA A ELEGIR UNA CUENTA DE GOOGLE
     return signInWithPopup(this._auth, provider)
+  }
+
+  // ESTA FUNCION ES PARA TRAER LAS IMAGENES LOGUEADA POR USUARIO
+  getUserPhotoURL() {
+    const currentUser = this._auth.currentUser;
+    if (currentUser) {
+      return currentUser.photoURL;
+    }
+    return null;
   }
 }
