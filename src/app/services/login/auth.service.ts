@@ -39,7 +39,16 @@ export class LoginService {
   getUserPhotoURL() {
     const currentUser = this._auth.currentUser;
     if (currentUser) {
-      return currentUser.photoURL;
+      return currentUser.photoURL || currentUser.displayName;
+    }
+    return null;
+  }
+
+  // ESTA FUNCION ES PARA TRAER EL NOMBRE LOGUEADA POR USUARIO
+  getUser() {
+    const currentUser = this._auth.currentUser;
+    if (currentUser) {
+      return currentUser.displayName;
     }
     return null;
   }

@@ -1,5 +1,16 @@
 <!-- Contenedor Principal -->
   <section class="h-screen font-sans">
+
+    
+    <div class="draggable no-draggable-children sticky top-0 p-3 mb-1.5 flex items-center justify-between z-10 h-header-height font-semibold bg-[#1E1E1E] max-md:hidden">
+      <div class="font-semibold text-2xl">GoingChat</div>
+     
+      <!-- <div
+        class="h-12 w-12 p-2 bg-yellow-500 rounded-full text-white font-semibold flex items-center justify-center"
+      > -->
+      <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="h-12 w-12 p-2 rounded-full text-white font-semibold flex items-center justify-center" />
+      <!-- </div> -->
+    </div>
     <!-- Sidebar -->
     <div class="flex flex-row h-full w-full overflow-x-hidden">
       
@@ -14,7 +25,7 @@
       </div>
 
       <!-- Barra lateral izquierda -->
-      <div id="sidebar" class="hidden lg:block lg:w-64 bg-[#171717] flex-shrink-0">
+      <div class=" hidden lg:block lg:w-64 bg-[#171717] flex-shrink-0">
         <div class="flex flex-col py-8 pl-6 pr-2 h-full">
           <!-- Encabezado de la barra lateral -->
            <div>
@@ -155,180 +166,8 @@
                 </div>
                 <!-- Más mensajes... -->
               </div>
-              <div class="grid grid-cols-12 gap-y-2">
-                <!-- Mensajes recibidos -->
-                <div class="col-start-1 col-end-8 p-3 rounded-lg">
-                  <div class="flex flex-row items-center">
-                    <div
-                        class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
-                        >
-                        Welcome to group everyone !
-                        </div>
-                    <img
-                        src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
-                        class="object-cover h-8 w-8 rounded-full"
-                        alt=""
-                    />
-                  </div>
-                </div>
-                <!-- Mensajes enviados -->
-                <div class="col-start-6 col-end-13 p-3 rounded-lg">
-                  <div class="flex items-center justify-start flex-row-reverse">
-                    <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
-                    </div>
-                    <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
-                      <div>¡Estoy bien! ¿y tú?</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Más mensajes... -->
-              </div>
-              <div class="grid grid-cols-12 gap-y-2">
-                <!-- Mensajes recibidos -->
-                <div class="col-start-1 col-end-8 p-3 rounded-lg">
-                  <div class="flex flex-row items-center">
-                    <div
-                        class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
-                        >
-                        Welcome to group everyone !
-                        </div>
-                    <img
-                        src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
-                        class="object-cover h-8 w-8 rounded-full"
-                        alt=""
-                    />
-                  </div>
-                </div>
-                <!-- Mensajes enviados -->
-                <div class="col-start-6 col-end-13 p-3 rounded-lg">
-                  <div class="flex items-center justify-start flex-row-reverse">
-                    <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
-                    </div>
-                    <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
-                      <div>¡Estoy bien! ¿y tú?</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Más mensajes... -->
-              </div>
-              <div class="grid grid-cols-12 gap-y-2">
-                <!-- Mensajes recibidos -->
-                <div class="col-start-1 col-end-8 p-3 rounded-lg">
-                  <div class="flex flex-row items-center">
-                    <div
-                        class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
-                        >
-                        Welcome to group everyone !
-                        </div>
-                    <img
-                        src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
-                        class="object-cover h-8 w-8 rounded-full"
-                        alt=""
-                    />
-                  </div>
-                </div>
-                <!-- Mensajes enviados -->
-                <div class="col-start-6 col-end-13 p-3 rounded-lg">
-                  <div class="flex items-center justify-start flex-row-reverse">
-                    <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
-                    </div>
-                    <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
-                      <div>¡Estoy bien! ¿y tú?</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Más mensajes... -->
-              </div>
-              <div class="grid grid-cols-12 gap-y-2">
-                <!-- Mensajes recibidos -->
-                <div class="col-start-1 col-end-8 p-3 rounded-lg">
-                  <div class="flex flex-row items-center">
-                    <div
-                        class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
-                        >
-                        Welcome to group everyone !
-                        </div>
-                    <img
-                        src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
-                        class="object-cover h-8 w-8 rounded-full"
-                        alt=""
-                    />
-                  </div>
-                </div>
-                <!-- Mensajes enviados -->
-                <div class="col-start-6 col-end-13 p-3 rounded-lg">
-                  <div class="flex items-center justify-start flex-row-reverse">
-                    <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
-                    </div>
-                    <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
-                      <div>¡Estoy bien! ¿y tú?</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Más mensajes... -->
-              </div>
-              <div class="grid grid-cols-12 gap-y-2">
-                <!-- Mensajes recibidos -->
-                <div class="col-start-1 col-end-8 p-3 rounded-lg">
-                  <div class="flex flex-row items-center">
-                    <div
-                        class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
-                        >
-                        Welcome to group everyone !
-                        </div>
-                    <img
-                        src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
-                        class="object-cover h-8 w-8 rounded-full"
-                        alt=""
-                    />
-                  </div>
-                </div>
-                <!-- Mensajes enviados -->
-                <div class="col-start-6 col-end-13 p-3 rounded-lg">
-                  <div class="flex items-center justify-start flex-row-reverse">
-                    <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
-                    </div>
-                    <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
-                      <div>¡Estoy bien! ¿y tú?</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Más mensajes... -->
-              </div>
-              <div class="grid grid-cols-12 gap-y-2">
-                <!-- Mensajes recibidos -->
-                <div class="col-start-1 col-end-8 p-3 rounded-lg">
-                  <div class="flex flex-row items-center">
-                    <div
-                        class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white"
-                        >
-                        Welcome to group everyone !
-                        </div>
-                    <img
-                        src="https://source.unsplash.com/vpOeXr5wmR4/600x600"
-                        class="object-cover h-8 w-8 rounded-full"
-                        alt=""
-                    />
-                  </div>
-                </div>
-                <!-- Mensajes enviados -->
-                <div class="col-start-6 col-end-13 p-3 rounded-lg">
-                  <div class="flex items-center justify-start flex-row-reverse">
-                    <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-                        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
-                    </div>
-                    <div class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl">
-                      <div>¡Estoy bien! ¿y tú?</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Más mensajes... -->
-              </div>
+            
+             
             </div>
           </div>
 
