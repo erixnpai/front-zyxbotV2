@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component} from '@angular/core';
+import { Component, inject} from '@angular/core';
 import { LoginService } from '../../services/login/auth.service';
 import { Router } from '@angular/router';
 import { toast } from 'ngx-sonner';
 import { async } from 'rxjs';
+import { AuthStateService } from '../../services/data-access/auth-state.service';
 
 @Component({
   selector: 'app-chat',
@@ -15,9 +16,15 @@ import { async } from 'rxjs';
 export default class ChatComponent {
   userPhotoURL: string | null = null;
   user: string | null = null
-
+  private _auth = inject(AuthStateService);
+  
   constructor(public srvAuth: LoginService, private router: Router) {
     this.CargardatoUser()
+  }
+
+  async CerrarSesion() {
+    await this._auth.logOut();
+    this.router.navigateByUrl('/auth/login');
   }
 
   async CargardatoUser() {
