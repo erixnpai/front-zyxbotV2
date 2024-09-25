@@ -1,10 +1,10 @@
 <!-- component -->
 <section
-  class="relative bg-[url('/assets/fondoheader.png')] bg-cover bg-center bg-no-repeat h-screen font-sans flex flex-col items-center justify-center"
+  class="relative bg-[url('/assets/fondoheader.png')] bg-cover bg-center bg-no-repeat md:h-screen h-96 font-sans flex flex-col items-center justify-center"
 >
-  <div
-    class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"
-  ></div>
+<div
+class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"
+></div>
 
   <div class="mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="lg:grid lg:grid-cols-12 lg:gap-8 pt-12 lg:pt-0">
@@ -13,23 +13,19 @@
       >
         <div class="">
           <div class="flex flex-col items-center justify-center">
-            <h1
-              class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl"
-            >
-              ¿Buscas información sobre Universidades?
-            </h1>
-            <p class="text-white mt-10 md:block">
-              ZyxBot está aquí para ayudarte. Nuestra inteligencia artificial
-              potenciada te proporcionará información precisa y relevante de
-              manera eficiente.
-            </p>
+            <h1 class="mt-4 text-2xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl animate-fade-right animate-once animate-ease-linear">
+  ¿Buscas información sobre Universidades?
+</h1>
+<p class="text-white text-xs md:text-sm mt-10 md:block delay-100 animate-fade-up animate-once animate-ease-linear">
+  ZyxBot está aquí para ayudarte. Nuestra inteligencia artificial potenciada te proporcionará información precisa y relevante de manera eficiente.
+</p>
           </div>
           <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
             <button
-              class="inline-flex items-center text-white bg-[#2F80ED] justify-center rounded-xl text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-600 h-10 px-4 py-2 w-full sm:w-auto"
-            >
-              Ir al chat
-            </button>
+            class="inline-flex items-center text-white font-bold bg-[#2F80ED] justify-center rounded-xl text-sm   ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#F6B93E]  px-4 py-2 w-full md:w-52   animate-bounce animate-once animate-ease-linear"
+          >
+            Ir al chat
+          </button>
           </div>
         </div>
       </div>
@@ -42,67 +38,69 @@
       </div>
     </div>
   </div>
-</section>
-
-<!-- universidades -->
-<section class="bg-[#040C1C] h-32">
-  <div class="container mx-auto">
+  <!-- Universidades -->
+  <div class="container mx-auto md:mt-6 mt-2 items-center z-50 ">
+    <h2 class="uppercase text-white text-center">Universidades</h2>
     <div class="flex items-center flex-wrap justify-between">
       <!-- Cambiar justify-center a justify-between -->
       <!-- Logo 1 -->
-      <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/LOGO_OFICIAL_BICU.png" alt="" />
       </div>
       <!-- Logo 2 -->
-      <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/UNI-Nicaragua.png" alt="" />
       </div>
       <!-- Logo 3 -->
-      <div class="w-28 h-28 sm:w-20 flex justify-center items-center m-4">
+      <div class="md:w-28 md:h-28 w-10 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/UNIAV.png" alt="" />
       </div>
       <!-- Logo 4 -->
-      <div class="w-16 h-16 sm:w-14 flex justify-center items-center m-4">
+      <div class="md:w-16 md:h-16 w-5 flex justify-center items-center m-4">
         <img
           src="/assets/logoUniversidades/universidad_nacional_agraria_una.webp"
           alt=""
         />
       </div>
       <!-- Logo 5 -->
-      <div class="w-32 h-32 sm:w-20 flex justify-center items-center m-4">
+      <div class="md:w-32 md:h-32 w-10 flex justify-center items-center m-4">
         <img
           src="/assets/logoUniversidades/universidad_nacional_politecnica.webp"
           alt=""
         />
       </div>
-      <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
         <img
           src="/assets/logoUniversidades/Universidad-Nacional-Multidisciplinaria-RMA_aprobado_UNM-Logo_color-copia.png"
           alt=""
         />
       </div>
-      <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/URACCAN Logo web2_1.png" alt="" />
       </div>
     </div>
   </div>
+  
+  
 </section>
+
+
 
 <!-- funciones de zyxbot -->
 <!-- Sección principal -->
 <section
-  class="bg-[url('/assets/Telefono3.png')] bg-cover bg-center bg-no-repeat h-screen flex flex-col items-center pt-20 relative"
+  class="bg-[#040C1C] bg-[url('/assets/Telefono3.png')] bg-cover bg-center bg-no-repeat md:h-screen flex flex-col items-center md:pt-10 pt-4 relative h-96"
 >
-  <div class="text-center max-w-lg px-4">
-    <h2 class="text-3xl font-bold text-white mb-4">Así es como funciona</h2>
-    <p class="text-lg text-white">
+  <div class="text-center max-w-lg px-4 ">
+    <h2 class="text-lg md:text-4xl font-bold text-white mb-4 animate-fade-down animate-once animate-ease-linear">Así es como funciona</h2>
+    <p class="text-xs md:text-sm text-white animate-fade-down animate-once animate-ease-linear">
       ZyxBot es una plataforma educativa que apoya a jóvenes entusiastas
       indecisos sobre su carrera futura. Ofrece tres productos innovadores sobre
       su trayectoria profesional.
     </p>
     <!-- Contenedor para las palabras clave -->
-    <div class="flex justify-center mt-6 space-x-4">
-      <span class="text-white bg-blue-600 py-1 px-3 rounded-full"
+    <div class="flex justify-center text-xs md:text-sm mt-6 space-x-4 animate-fade-down animate-once animate-ease-linear">
+      <span class="text-white  bg-blue-600  py-1 px-3  rounded-full"
         >Chat en vivo</span
       >
       <span class="text-white bg-blue-600 py-1 px-3 rounded-full"
@@ -118,11 +116,11 @@
   <div
     class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4"
   >
-    <h2 class="text-2xl font-bold text-white mb-4">
+    <h2 class=" text-sm whitespace-nowrap md:text-2xl font-bold text-white mb-4">
       ¿Qué esperas? <br />En ZyxBot encontrarás todo lo que buscas
     </h2>
     <button
-      class="text-white bg-[#F6B93E] hover:bg-[#fcb21d] py-2 px-6 rounded-xl text-lg uppercase"
+      class="text-white font-bold bg-[#F6B93E] hover:bg-[#fcb21d] py-1 px-4 text-sm md:py-2 md:px-6 rounded-xl md:text-lg uppercase"
     >
       Registrarse
     </button>
@@ -133,8 +131,8 @@
 <section
   class="bg-[#040C1C] h-32 flex flex-col items-center justify-center px-4"
 >
-  <h2 class="text-2xl font-bold text-white mb-2">Ventajas de ZyxBot</h2>
-  <p class="text-white text-lg text-center whitespace-nowrap">
+  <h2 class="text:sm  md:text-2xl font-bold text-white mb-2">Ventajas de ZyxBot</h2>
+  <p class="text-white text-xs md:text-lg text-center md:whitespace-nowrap">
     En ZyxBot, estamos comprometidos a simplificar tu búsqueda educativa y a ser
     tu compañero confiable en cada paso de tu viaje.
   </p>
