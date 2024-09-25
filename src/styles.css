@@ -8,3 +8,14 @@
     margin: 0;
 }
 
+body{
+    @apply bg-[#040C1C]
+}
+
+.nav-links{
+    @apply text-lg font-medium duration-300
+}
+.nav-links:hover{
+    @apply text-[#F6B93E]
+}
+

@@ -1,239 +1,151 @@
 <!-- component -->
-<!-- <div class="bg-white h-screen font-sans flex flex-col items-center justify-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:grid lg:grid-cols-12 lg:gap-8 pt-12 lg:pt-0">
-        <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
-          <div class="">
-            <div class="flex flex-col items-center justify-center">
-              <a class="inline-flex px-1 py-1 gap-x-2 rounded-xl  border-gray-400 border-2 hover:border-orange-500 items-center text-sm font-semibold text-gray-600 space-x-1"
-                href="#">
-                <span
-                  class="bg-orange-100 flex items-center justify-center gap-2 text-orange-800 text-sm font-semibold px-2.5 py-0.5 rounded-lg dark:bg-blue-900 dark:text-blue-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="h-6 w-6 text-orange-400">
-                    <path d="m3 11 18-5v12L3 14v-3z"></path>
-                    <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path>
-                  </svg>
-                  New</span>
-                <span>Some important improvements</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="h-4 w-4">
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg></a>
-              <h1
-                class="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
-                <p class="sm:block">Bienvenido</p><span class="text-zinc-500 md:block">a la nueva versión</span>
-                <p class="text-orange-600 md:block"> de ZyxBot.</p>
-              </h1>
-            </div>
-            <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
-              <button
-                class="inline-flex items-center text-white bg-orange-500 justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full sm:w-auto">
-                Get started now</button><button
-                class="inline-flex hover:ring-gray-400 hover:bg-gray-100 items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 mt-3 w-full sm:mt-0 sm:ml-3 sm:w-auto">
-                Request access
-              </button>
-            </div>
+<section class="relative bg-[url('/assets/fondoheader.png')] bg-cover bg-center bg-no-repeat h-screen font-sans flex flex-col items-center justify-center">
+  
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"></div>
+  
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8 pt-12 lg:pt-0">
+      <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+        <div class="">
+          <div class="flex flex-col items-center justify-center">
+            <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+              ¿Buscas información sobre Universidades?
+            </h1>
+            <p class="text-white mt-10 md:block">ZyxBot está aquí para ayudarte. Nuestra inteligencia artificial potenciada te proporcionará información precisa y relevante de manera eficiente.</p>
           </div>
-        </div>
-        <div class="mt-16 ml-6 sm:mt-24 lg:mt-0 lg:col-span-5">
-          <p class="text-base ml-12 text-gray-600 sm:text-xl lg:text-lg xl:text-xl">
-            Earn new subscribers with #1 podcasting tool in the market. Create, distribute and
-            monetize your show.
-          </p>
-          <div class="mt-12 ml-8">
-            <div class="grid grid-cols-3 gap-6 sm:gap-6 xl:gap-8">
-              <div class="text-center sm:flex sm:items-center sm:justify-center">
-                <div class="sm:flex-shrink-0">
-                  <div class="flow-root">
-                    <div
-                      class="border w-fit transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 inline-flex items-center justify-center px-3 py-0.5 text-sm font-medium leading-5 text-orange-600 bg-orange-100 rounded-full">
-                      Active User
-                    </div>
-                    <p class="text-4xl font-bold text-gray-900">16K+</p>
-                  </div>
-                </div>
-               
-              </div>
-              <div class="text-center sm:flex sm:items-center sm:justify-center">
-                <div class="sm:flex-shrink-0">
-                  <div class="flow-root">
-                    <div
-                      class="border w-fit transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 inline-flex items-center justify-center px-3 py-0.5 text-sm font-medium leading-5 text-orange-600 bg-orange-100 rounded-full">
-                      Episodes
-                    </div>
-                    <p class="text-4xl font-bold ml-4 text-gray-900">28K+</p>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="text-center sm:flex sm:items-center sm:justify-center">
-                <div class="sm:flex-shrink-0">
-                  <div class="flow-root">
-                    <div
-                      class="border w-fit transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 inline-flex items-center justify-center px-3 py-0.5 text-sm font-medium leading-5 text-orange-600 bg-orange-100 rounded-full">
-                      Series
-                    </div>
-                    <p class="text-4xl font-bold ml-4 text-gray-900">18+</p>
-                  </div>
-                </div>
-               
-              </div>
-            </div>
-          </div>
-          <div class="mt-12 flex justify-center space-x-3">
-            <span class="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-full"><img
-                class="aspect-square h-full w-full" alt="User 1"
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;width=40" /></span><span
-              class="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-full"><img
-                class="aspect-square h-full w-full" alt="User 2"
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;width=40" /></span><span
-              class="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-full"><img
-                class="aspect-square h-full w-full" alt="User 3"
-                src="https://images.unsplash.com/photo-1548142813-c348350df52b?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;width=40" /></span><span
-              class="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-full"><img
-                class="aspect-square h-full w-full" alt="User 4"
-                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;width=40" /></span>
-            <img class="relative flex h-14 w-14 shrink-0 overflow-hidden rounded-full"
-              src="https://images.unsplash.com/photo-1527718641255-324f8e2d0421?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="5">
+          <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+            <button class="inline-flex items-center text-white bg-[#2F80ED] justify-center rounded-xl text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-orange-600 h-10 px-4 py-2 w-full sm:w-auto">
+              Ir al chat
+            </button>
           </div>
         </div>
       </div>
+      <div class="mt-16 ml-6 sm:mt-24 lg:mt-0 lg:col-span-5">
+        <img src="/assets/Mockup-laptop-Zyxbot.png" alt="Mockup de laptop" class="w-full h-auto object-contain hidden lg:block">
+      </div>
     </div>
-  </div> -->
+  </div>
+</section>
 
-<!-- header -->
-      <section class="h-dvh w-dvw max-h-[80rem] relative">
-        <div class="absolute inset-0 z-[1]">
-          <img
-            class="h-full w-full object-cover object-center"
-            src="/assets/fondoheader.png"
-            alt="fondo"
-          />
-          
-        </div>
-        <div
-          class="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10"
-        >
-          <div class="h-full w-full flex flex-col relative space-y-6">
-            <div class="mt-auto mb-0 text-gray-50 md:pb-36 space-y-6">
-        
-              <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">
-                ¿Buscas información sobre Universidades?
-              </h1>
-              <p
-                class="max-w-[30rem] font-light ml-4 before:content-[''] relative before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm"
-              >
-               ZyxBot está aquí para ayudarte. Nuestra inteligencia artificial potenciada te proporcionará información precisa y relevante de manera eficiente
-              </p>
-              <div class="md:flex-row flex-col flex gap-4">
-                <button
-                  class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-accent-400 cursor-pointer bg-gray-50/10 backdrop-blur-3xl"
-                >
-                  Ir al chat
-                </button>
-              </div>
-            </div>
-            <div class="md:absolute md:right-0 md:bottom-32 text-gray-50 my-16 w-64">
-              <img src="/assets/Mockup-laptop-Zyxbot.png" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
+
+
+
 
       <!-- universidades -->
-      <section class="bg-[#040C1C] py-12">
+      <section class="bg-[#040C1C] h-32">
         <div class="container mx-auto">
-          <div class="flex justify-center items-center flex-wrap gap-8">
+          <div class="flex items-center flex-wrap justify-between"> <!-- Cambiar justify-center a justify-between -->
             <!-- Logo 1 -->
-            <div class="w-32 h-32  flex justify-center items-center">
+            <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
               <img src="/assets/logoUniversidades/LOGO_OFICIAL_BICU.png" alt="">
             </div>
             <!-- Logo 2 -->
-            <div class="w-32 h-32  flex justify-center items-center">
+            <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
               <img src="/assets/logoUniversidades/UNI-Nicaragua.png" alt="">
-              
             </div>
             <!-- Logo 3 -->
-            <div class="w-32 h-32 flex justify-center items-center">
+            <div class="w-28 h-28 sm:w-20 flex justify-center items-center m-4">
               <img src="/assets/logoUniversidades/UNIAV.png" alt="">
             </div>
             <!-- Logo 4 -->
-            <div class="w-32 h-32 flex justify-center items-center">
+            <div class="w-16 h-16 sm:w-14 flex justify-center items-center m-4">
               <img src="/assets/logoUniversidades/universidad_nacional_agraria_una.webp" alt="">
             </div>
             <!-- Logo 5 -->
-            <div class="w-32 h-32 flex justify-center items-center">
+            <div class="w-32 h-32 sm:w-20 flex justify-center items-center m-4">
               <img src="/assets/logoUniversidades/universidad_nacional_politecnica.webp" alt="">
             </div>
-            <!-- Añadir más logos según sea necesario -->
+            <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
+              <img src="/assets/logoUniversidades/Universidad-Nacional-Multidisciplinaria-RMA_aprobado_UNM-Logo_color-copia.png" alt="">
+            </div>
+            <div class="w-20 h-20 sm:w-16 flex justify-center items-center m-4">
+              <img src="/assets/logoUniversidades/URACCAN Logo web2_1.png" alt="">
+            </div>
           </div>
         </div>
       </section>
       
+      <!-- funciones de zyxbot -->
+      <!-- Sección principal -->
+<section class="bg-[url('/assets/Telefono3.png')] bg-cover bg-center bg-no-repeat h-screen flex flex-col items-center pt-20 relative">
+  <div class="text-center max-w-lg px-4">
+    <h2 class="text-3xl font-bold text-white mb-4">Así es como funciona</h2>
+    <p class="text-lg text-white">
+      ZyxBot es una plataforma educativa que apoya a jóvenes entusiastas indecisos sobre su carrera futura. Ofrece tres productos innovadores sobre su trayectoria profesional.
+    </p>
+    <!-- Contenedor para las palabras clave -->
+    <div class="flex justify-center mt-6 space-x-4">
+      <span class="text-white bg-blue-600 py-1 px-3 rounded-full">Chat en vivo</span>
+      <span class="text-white bg-blue-600 py-1 px-3 rounded-full">Mapa Interactivo</span>
+      <span class="text-white bg-blue-600 py-1 px-3 rounded-full">Test vocacional</span>
+    </div>
+  </div>
 
-      <!-- funciones zyxgbot  -->
-      <section class="h-screen w-full relative bg-[#040C1C]">
-        <!-- Imagen de fondo de computadora -->
-        <div class="absolute inset-0">
-          <img class="h-full w-full object-cover object-center" src="/assets/Telefono3.png" alt="fondo" />
-        </div>
-        <h2 class="z-20">hafhiudhfdsufh</h2>
-     
-      </section>
-      
-<!-- Registro -->
-      <section class="h-screen w-full relative bg-gray-100">
-        <!-- Imagen de fondo de computadora -->
-        <div class="absolute inset-0">
-          <img class="h-full w-full object-cover object-center" src="/assets/registrohome.png" alt="fondo" />
-        </div>
-      
-        <!-- Contenedor con formulario -->
-        <div class="relative z-10 flex justify-start items-center h-full pl-16">
-          <div class="p-8 max-w-lg w-full">
-            
-            <h2 class="text-center text-3xl font-bold text-white uppercase">Registrase</h2>
-      
-            
-            <form class="mt-6">
-              <!-- Nombre -->
-              <div class="mb-4">
-                <input type="text" id="name" class="w-full mt-2 p-2 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Usuario" />
-              </div>
+  <!-- Contenedor para el h2 y el botón en la parte inferior -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center px-4">
+    <h2 class="text-2xl font-bold text-white mb-4">¿Qué esperas? <br>En ZyxBot encontrarás todo lo que buscas</h2>
+    <button class="text-white bg-[#F6B93E] hover:bg-[#fcb21d] py-2 px-6 rounded-xl text-lg uppercase">
+      Registrarse
+    </button>
+  </div>
+</section>
 
-              <div class="mb-4">
-                <input type="text" id="name" class="w-full mt-2 p-2 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Nombre completo " />
-              </div>
+<!-- Ventajas -->
+<section class="bg-[#040C1C] h-32 flex flex-col items-center justify-center px-4">
+  <h2 class="text-2xl font-bold text-white mb-2">Ventajas de ZyxBot</h2>
+  <p class="text-white text-lg text-center whitespace-nowrap">En ZyxBot, estamos comprometidos a simplificar tu búsqueda educativa y a ser tu compañero confiable en cada paso de tu viaje.</p>
+</section>
+
       
-              <!-- Email -->
-              <div class="mb-4">
-                <input type="email" id="email" class="w-full mt-2 p-2 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Correo electrónico " />
-              </div>
       
-              <!-- Contraseña -->
-              <div class="mb-4">
-                <input type="password" id="password" class="w-full mt-2 p-2 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Contraseña" />
-              </div>
-      
-              <!-- Confirmar contraseña -->
-              <div class="mb-4">
-                <input type="password" id="password_confirmation" class="w-full mt-2 p-2 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Confirma tu contraseña" />
-              </div>
-      
-              <!-- Botón de registro centrado y grande -->
-              <div class="flex justify-center">
-                <button type="submit" class="bg-[#F6B93E] hover:bg-blue-700 text-white py-3 px-10 w-full rounded-md text-lg">Sign Up</button>
-              </div>
-            </form>
+      <!-- registro -->
+      <section class=" bg-[url('/assets/registrohome.png')] bg-cover bg-center bg-no-repeat h-screen flex flex-col md:flex-row items-center justify-between py-16 px-4 bg-gray-100">
+        <div class="md:w-1/2 md:pr-8">
+          <div class="relative z-10 flex justify-center items-center h-full p-4">
+            <div class="p-8 max-w-lg w-full">
+              
+              <h2 class="text-center text-3xl font-bold text-white uppercase">Registrase</h2>
+          
+              <form class="mt-6">
+                <!-- Nombre -->
+                <div class="mb-4">
+                  <input type="text" id="name" class="w-full mt-2 p-3 sm:p-4 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Usuario" />
+                </div>
+        
+                <div class="mb-4">
+                  <input type="text" id="full_name" class="w-full mt-2 p-3 sm:p-4 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Nombre completo" />
+                </div>
+            
+                <!-- Email -->
+                <div class="mb-4">
+                  <input type="email" id="email" class="w-full mt-2 p-3 sm:p-4 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Correo electrónico" />
+                </div>
+            
+                <!-- Contraseña -->
+                <div class="mb-4">
+                  <input type="password" id="password" class="w-full mt-2 p-3 sm:p-4 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Contraseña" />
+                </div>
+            
+                <!-- Confirmar contraseña -->
+                <div class="mb-4">
+                  <input type="password" id="password_confirmation" class="w-full mt-2 p-3 sm:p-4 bg-transparent border border-white rounded-md text-white placeholder-gray-200" placeholder="Confirma tu contraseña" />
+                </div>
+            
+                <!-- Botón de registro centrado y grande -->
+                <div class="flex justify-center">
+                  <button type="submit" class="bg-[#F6B93E] hover:bg-blue-700 text-white py-2 sm:py-3 px-8 sm:px-10 w-full rounded-md text-lg">Sign Up</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
+
       </section>
-      <!-- Carrusel  -->
       
+    
+      
+
+
 
 
 <!-- footer -->
@@ -245,7 +157,7 @@
         <h4 class="text-3xl fonat-semibold text-white">
           ZyxBot Company
         </h4>
-        <h5 class="text-lg mt-3 mb-2 text-white ">
+        <h5 class="text-lg mt-4 mb-2 text-white ">
          ¿Buscas respuestas a tus preguntas sobre Universidades y programas académicos en Nicaragua? Ya sea que estés buscando tu primera experencia universitaria o explorando opciones para continuar tu educación, ZyxBot es tu compañero en este viaje educativo.
         </h5>
         <div class="mt-6 lg:mb-0 mb-6">
@@ -314,11 +226,17 @@
         </div>
       </div>
     </div>
-    <hr class="my-6 border-blueGray-300" />
-    <div class="flex flex-wrap items-center md:justify-between justify-center">
-      <div class=" bg-black w-full md:w-4/12 px-4 mx-auto text-center">
-        <div class="text-sm text-blueGray-500 font-semibold py-1"></div>
-      </div>
-    </div>
   </div>
+  
 </footer>
+<div class="h-16 bg-[#151A2B] flex items-center justify-between px-4">
+  <!-- Imagen a la izquierda -->
+  <div class="flex items-center">
+    <img src="/assets/LogoZyxBot.png" alt="Logo" class="h-10" />
+  </div>
+
+  <!-- Texto de copyright a la derecha -->
+  <div class="text-white text-sm">
+    © 2024 ZyxBot. Todos los derechos reservados. Este sitio web y su contenido 
+  </div>
+</div>
