@@ -15,6 +15,8 @@ export const routes: Routes = [
     {
         canActivateChild: [privateGuard()],
         path: 'chat',
+        title: 'Chat',
+        loadComponent: () => import('./pages/chat/chat.component'),
         loadChildren: () => import('./pages/chat/chat.routes')
     },
     {

@@ -33,7 +33,7 @@ export default class LoginComponent {
 
         await this.srvAuth.login({email, password});
         toast.success('Acceso valido');
-        this.router.navigateByUrl('/chat/ichat');
+        this.router.navigate(['/chat/']);
       } catch (error) {
         toast.error('Error usuario no existe');
       }
@@ -45,7 +45,7 @@ export default class LoginComponent {
       
       if (result) {
         toast.success('Usuario autenticado con Google');
-        this.router.navigateByUrl('/chat/ichat');  // Redirige solo si la autenticación es exitosa.
+        this.router.navigate(['/chat/']);  // Redirige solo si la autenticación es exitosa.
       } else {
         throw new Error('No se pudo completar la autenticación');
       }

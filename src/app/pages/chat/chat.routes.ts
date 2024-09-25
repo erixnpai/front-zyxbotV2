@@ -1,9 +1,16 @@
 import { Routes } from '@angular/router';
 
 export default [
+
     {
-        path : 'ichat',
-        title: 'Chat',
-        loadComponent: () => import('./chat.component')
+        path : '',
+        title: 'Inicio',
+        loadComponent: () => import('../../components/chat-vacio/chat-vacio.component')
     },
+    {
+        path : 'chatunan',
+        title: 'Chat Unan',
+        loadComponent: () => import('../../components/chat-unan/chat-unan.component')
+    }
+   
 ] as Routes
