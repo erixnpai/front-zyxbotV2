@@ -17,32 +17,44 @@ interface ChatMessage {
   standalone: true,
   imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './chat-unan.component.html',
-  styleUrl: './chat-unan.component.css'
+  styleUrl: './chat-unan.component.css',
 })
 export default class ChatUnanComponent {
   userPhotoURL: string | null = null;
-  user: string | null = null
+  user: string | null = null;
   message: string = '';
-  messages: ChatMessage[] = []; 
-  resp = ""
+  messages: any[] = [];
+  resp: any;
 
   private _auth = inject(AuthStateService);
-  
-  constructor(public srvAuth: LoginService, private router: Router, private srvchat: ChatService) {
-    this.CargardatoUser()
+
+  constructor(
+    public srvAuth: LoginService,
+    private router: Router,
+    private srvchat: ChatService
+  ) {
+    this.CargardatoUser();
   }
 
   ngOnInit(): void {
     // Suscribirse a los mensajes del servidor
-    this.srvchat.getMessage().subscribe((message: string) => {
+    this.srvchat.getMessage().subscribe((message: any) => {
+      console.log(message);
 
-      
-      this.resp += message;
+      this.resp += message.message;
 
-      console.log( this.resp);
-      
+      console.log(this.resp);
 
-      this.messages.push({ text: message, isUser: false }); // Añade la respuesta del servidor
+      if ((message.end == true)) {
+        console.log("finaaaaaaaaaaaal");
+        
+        // this.messages.push({ text: this.resp, isUser: false });
+        this.resp = '';
+      }
+
+      // this.messages.push({ text: this.resp, isUser: false }); // Añade la respuesta del servidor
+
+      this.messages[this.messages.length - 1] = { text: this.resp, isUser: false };
     });
   }
 
@@ -60,7 +72,7 @@ export default class ChatUnanComponent {
     try {
       this.userPhotoURL = this.srvAuth.getUserPhotoURL();
       this.user = this.srvAuth.getUser();
-      console.log("Imagen del usuario", this.userPhotoURL);
+      console.log('Imagen del usuario', this.userPhotoURL);
     } catch (error) {
       toast.error('Error al cargar usuario con Google');
     }
