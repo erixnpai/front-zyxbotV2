@@ -5,11 +5,14 @@ import { routes } from './app.routes';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
+// const config: SocketIoConfig = { url: 'http://localhost:3000/ollama', options: {} };
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    // SocketIoModule.forRoot(config),
     provideFirebaseApp(() =>
       initializeApp({
         projectId: 'zyxbotv2',

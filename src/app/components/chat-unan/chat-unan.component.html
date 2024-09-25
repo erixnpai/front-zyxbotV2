@@ -1,122 +1,49 @@
 <div class="flex-1">
-    <!-- Chat Messages -->
-    <div class="h-screen overflow-y-auto md:px-24 xl:px-40 px-12 pb-32">
-   <!-- Incoming Message -->
-    <div class="flex items-start mb-4 mt-4">
-      <!-- User Avatar -->
-      <div class="w-9 h-9 bg-white rounded-full flex-shrink-0 flex items-center justify-center mr-2">
-        <img src="assets/ImagotipoZyxbotNegativo.png" alt="User Avatar" class="w-6 h-6 rounded-full">
+  <!-- Chat Messages -->
+  <div class="h-screen overflow-y-auto md:px-24 xl:px-40 px-12 pb-32">
+    <!-- Mensajes del chat -->
+    <div *ngFor="let msg of messages" class="mb-4 mt-4" [ngClass]="{'flex justify-end': msg.isUser, 'flex items-start': !msg.isUser}">
+      <!-- Contenido del mensaje del usuario -->
+      <div *ngIf="msg.isUser" class="flex justify-end">
+        <div class="text-white rounded-lg p-3 max-w-xl break-words">
+          <p class="text-sm">{{ msg.text }}</p>
+        </div>
+        <div class="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center ml-2">
+          <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-9 w-9 rounded-full" />
+        </div>
       </div>
-      <!-- Message Content -->
-      <div class=" text-white rounded-lg p-3 flex-grow max-w-full break-words">
-        <p class="text-sm">¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado de ayudarte. Para estudiar ingeniería informática, hay varias universidades que podrían ser adecuadas para ti. Algunas de las opciones destacadas son...</p>
-      </div>
-    </div>
 
-    <!-- Outgoing Message -->
-    <div class="flex justify-end mb-4">
-      <!-- Message Content -->
-      <div class="text-white rounded-lg p-3 max-w-xl break-words">
-        <p class="text-sm">¡Gracias! Me encantaría saber más sobre la Universidad ABC.</p>
-      </div>
-      <!-- User Avatar -->
-      <div class="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center ml-2">
-        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-9 w-9 rounded-full" />
-      </div>
-    </div>
-   <!-- Incoming Message -->
-    <div class="flex items-start mb-4 mt-4">
-      <!-- User Avatar -->
-      <div class="w-9 h-9 bg-white rounded-full flex-shrink-0 flex items-center justify-center mr-2">
-        <img src="assets/ImagotipoZyxbotNegativo.png" alt="User Avatar" class="w-6 h-6 rounded-full">
-      </div>
-      <!-- Message Content -->
-      <div class=" text-white rounded-lg p-3 flex-grow max-w-full break-words">
-        <p class="text-sm">¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado de ayudarte. Para estudiar ingeniería informática, hay varias universidades que podrían ser adecuadas para ti. Algunas de las opciones destacadas son...</p>
+      <!-- Contenido del mensaje del bot -->
+      <div *ngIf="!msg.isUser" class="flex items-start">
+        <div class="w-9 h-9 bg-white rounded-full flex-shrink-0 flex items-center justify-center mr-2">
+          <img src="assets/ImagotipoZyxbotNegativo.png" alt="User Avatar" class="w-6 h-6 rounded-full">
+        </div>
+        <div class="text-white rounded-lg p-3 flex-grow max-w-full break-words">
+          <p class="text-sm">{{ msg.text }}</p>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Outgoing Message -->
-    <div class="flex justify-end mb-4">
-      <!-- Message Content -->
-      <div class="text-white rounded-lg p-3 max-w-xl break-words">
-        <p class="text-sm">¡Gracias! Me encantaría saber más sobre la Universidad ABC.</p>
-      </div>
-      <!-- User Avatar -->
-      <div class="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center ml-2">
-        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-9 w-9 rounded-full" />
-      </div>
-    </div>
-   <!-- Incoming Message -->
-    <div class="flex items-start mb-4 mt-4">
-      <!-- User Avatar -->
-      <div class="w-9 h-9 bg-white rounded-full flex-shrink-0 flex items-center justify-center mr-2">
-        <img src="assets/ImagotipoZyxbotNegativo.png" alt="User Avatar" class="w-6 h-6 rounded-full">
-      </div>
-      <!-- Message Content -->
-      <div class=" text-white rounded-lg p-3 flex-grow max-w-full break-words">
-        <p class="text-sm">¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado de ayudarte. Para estudiar ingeniería informática, hay varias universidades que podrían ser adecuadas para ti. Algunas de las opciones destacadas son...</p>
-      </div>
-    </div>
-
-    <!-- Outgoing Message -->
-    <div class="flex justify-end mb-4">
-      <!-- Message Content -->
-      <div class="text-white rounded-lg p-3 max-w-xl break-words">
-        <p class="text-sm">¡Gracias! Me encantaría saber más sobre la Universidad ABC.</p>
-      </div>
-      <!-- User Avatar -->
-      <div class="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center ml-2">
-        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-9 w-9 rounded-full" />
-      </div>
-    </div>
-   <!-- Incoming Message -->
-    <div class="flex items-start mb-4 mt-4">
-      <!-- User Avatar -->
-      <div class="w-9 h-9 bg-white rounded-full flex-shrink-0 flex items-center justify-center mr-2">
-        <img src="assets/ImagotipoZyxbotNegativo.png" alt="User Avatar" class="w-6 h-6 rounded-full">
-      </div>
-      <!-- Message Content -->
-      <div class=" text-white rounded-lg p-3 flex-grow max-w-full break-words">
-        <p class="text-sm">¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado d¡Hola! Claro, estaré encantado de ayudarte. Para estudiar ingeniería informática, hay varias universidades que podrían ser adecuadas para ti. Algunas de las opciones destacadas son...</p>
-      </div>
-    </div>
-
-    <!-- Outgoing Message -->
-    <div class="flex justify-end mb-4">
-      <!-- Message Content -->
-      <div class="text-white rounded-lg p-3 max-w-xl break-words">
-        <p class="text-sm">¡Gracias! Me encantaría saber más sobre la Universidad ABC.</p>
-      </div>
-      <!-- User Avatar -->
-      <div class="w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center ml-2">
-        <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-9 w-9 rounded-full" />
-      </div>
-    </div>
-       
-    </div>
-    
-    <!-- Chat Input -->
-    <footer class="absolute bottom-0 left-0 right-0 bg-[#212121] p-2 ">
-      <div
-      class="flex items-center w-3/4 bg-[#171717] m-auto rounded-[10px] py-[8px] pl-4 pr-4 justify-between"
-    >
+  <!-- Chat Input -->
+  <footer class="absolute bottom-0 left-0 right-0 bg-[#212121] p-2">
+    <div class="flex items-center w-3/4 bg-[#171717] m-auto rounded-[10px] py-[8px] pl-4 pr-4 justify-between">
       <input
-        class="w-[50.07613469985359vw] bg-transparent outline-none border-none text-white placeholder-[#171717 ] 2xl:w-[766px] resize-y"
+        [(ngModel)]="message"
+        (keydown.enter)="sendMessage()"
+        class="w-[50.07613469985359vw] bg-transparent outline-none border-none text-white placeholder-[#171717] 2xl:w-[766px] resize-y"
         type="text"
         placeholder="Envía un mensaje a ZyxBot..."
       />
       <button
+        (click)="sendMessage()"
         class="bg-[#383838] w-[30px] h-[30px] flex items-center justify-center rounded-[8px]"
       >
-      <i class="fa-solid fa-paper-plane text-[#828282]"></i>
+        <i class="fa-solid fa-paper-plane text-[#828282]"></i>
       </button>
     </div>
-          <!-- </div> -->
-          <div class="py-2 mx-2 leading-3 text-center">
-            <span class="text-[#828282] text-xs font-normal"
-              >ZyxBot -V.0.2 Todos los derechos reservados para el equipo Tamuga</span
-            >
-          </div>
-    </footer>
+    <div class="py-2 mx-2 leading-3 text-center">
+      <span class="text-[#828282] text-xs font-normal">ZyxBot - V.0.2 Todos los derechos reservados para el equipo Tamuga</span>
+    </div>
+  </footer>
 </div>

@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { NgxSonnerToaster } from 'ngx-sonner';
 import { AuthStateService } from './services/data-access/auth-state.service';
+import { ChatService } from './services/chatservices/chat.service';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { AuthStateService } from './services/data-access/auth-state.service';
 export class AppComponent {
   title = 'front-zyxbotV2';
   // constructor(private _auth: AuthStateService){}
+    srvChat = inject(ChatService);
     private _auth = inject(AuthStateService);
     private router = inject(Router);
   async CerrarSesion() {
