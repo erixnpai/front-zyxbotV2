@@ -16,7 +16,7 @@ class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"
             <h1 class="mt-4 text-2xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl animate-fade-right animate-once animate-ease-linear">
   ¿Buscas información sobre Universidades?
 </h1>
-<p class="text-white text-xs md:text-sm mt-10 md:block delay-100 animate-fade-up animate-once animate-ease-linear">
+<p class="text-white text-xs md:text-2xl mt-10 md:block delay-100 animate-fade-up animate-once animate-ease-linear">
   ZyxBot está aquí para ayudarte. Nuestra inteligencia artificial potenciada te proporcionará información precisa y relevante de manera eficiente.
 </p>
           </div>
@@ -41,41 +41,41 @@ class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"
   <!-- Universidades -->
   <div class="container mx-auto md:mt-6 mt-2 items-center z-50 ">
     <h2 class="uppercase text-white text-center">Universidades</h2>
-    <div class="flex items-center flex-wrap justify-between">
+    <div class="flex items-center flex-wrap justify-between animate-loop-scroll ">
       <!-- Cambiar justify-center a justify-between -->
       <!-- Logo 1 -->
-      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-5 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/LOGO_OFICIAL_BICU.png" alt="" />
       </div>
       <!-- Logo 2 -->
-      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-5 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/UNI-Nicaragua.png" alt="" />
       </div>
-      <!-- Logo 3 -->
-      <div class="md:w-28 md:h-28 w-10 flex justify-center items-center m-4">
+   
+      <div class="md:w-28 md:h-28 w-5 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/UNIAV.png" alt="" />
       </div>
-      <!-- Logo 4 -->
+   
       <div class="md:w-16 md:h-16 w-5 flex justify-center items-center m-4">
         <img
           src="/assets/logoUniversidades/universidad_nacional_agraria_una.webp"
           alt=""
         />
       </div>
-      <!-- Logo 5 -->
-      <div class="md:w-32 md:h-32 w-10 flex justify-center items-center m-4">
+     
+      <div class="md:w-32 md:h-32 w-5 flex justify-center items-center m-4">
         <img
           src="/assets/logoUniversidades/universidad_nacional_politecnica.webp"
           alt=""
         />
       </div>
-      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-5 flex justify-center items-center m-4">
         <img
           src="/assets/logoUniversidades/Universidad-Nacional-Multidisciplinaria-RMA_aprobado_UNM-Logo_color-copia.png"
           alt=""
         />
       </div>
-      <div class="md:w-20 md:h-20 w-10 flex justify-center items-center m-4">
+      <div class="md:w-20 md:h-20 w-5 flex justify-center items-center m-4">
         <img src="/assets/logoUniversidades/URACCAN Logo web2_1.png" alt="" />
       </div>
     </div>
@@ -86,6 +86,9 @@ class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"
 
 
 
+
+
+
 <!-- funciones de zyxbot -->
 <!-- Sección principal -->
 <section
@@ -93,13 +96,13 @@ class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"
 >
   <div class="text-center max-w-lg px-4 ">
     <h2 class="text-lg md:text-4xl font-bold text-white mb-4 animate-fade-down animate-once animate-ease-linear">Así es como funciona</h2>
-    <p class="text-xs md:text-sm text-white animate-fade-down animate-once animate-ease-linear">
+    <p class="text-xs md:text-lg text-white animate-fade-down animate-once animate-ease-linear mb-0">
       ZyxBot es una plataforma educativa que apoya a jóvenes entusiastas
       indecisos sobre su carrera futura. Ofrece tres productos innovadores sobre
       su trayectoria profesional.
     </p>
     <!-- Contenedor para las palabras clave -->
-    <div class="flex justify-center text-xs md:text-sm mt-6 space-x-4 animate-fade-down animate-once animate-ease-linear">
+    <div class="flex justify-center text-[10px] md:text-sm md:mt-6 mt-2 space-x-4 animate-fade-down animate-once animate-ease-linear">
       <span class="text-white  bg-blue-600  py-1 px-3  rounded-full"
         >Chat en vivo</span
       >
@@ -136,4 +139,36 @@ class="absolute inset-0 bg-gradient-to-b from-transparent to-[#040C1C]"
     En ZyxBot, estamos comprometidos a simplificar tu búsqueda educativa y a ser
     tu compañero confiable en cada paso de tu viaje.
   </p>
+
+  
 </section>
+<!-- <div class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl bg-[#040C1C]">
+  <marquee pauseOnHover class="[--duration:20s]">
+    <figure *ngFor="let review of firstRow" class="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-gray-700 p-4 bg-gray-800 mx-2">
+      <div class="flex flex-row items-center gap-2">
+        <img class="rounded-full" width="32" height="32" alt="" [src]="review.img" />
+        <div class="flex flex-col">
+          <figcaption class="text-sm font-medium text-white">{{ review.name }}</figcaption>
+        </div>
+      </div>
+      <blockquote class="mt-2 text-sm text-gray-300">{{ review.body }}</blockquote>
+    </figure>
+  </marquee>
+  
+  <marquee reverse pauseOnHover class="[--duration:20s]">
+    <figure *ngFor="let review of secondRow" class="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-gray-700 p-4 bg-gray-800 mx-2">
+      <div class="flex flex-row items-center gap-2">
+        <img class="rounded-full" width="32" height="32" alt="" [src]="review.img" />
+        <div class="flex flex-col">
+          <figcaption class="text-sm font-medium text-white">{{ review.name }}</figcaption>
+        </div>
+      </div>
+      <blockquote class="mt-2 text-sm text-gray-300">{{ review.body }}</blockquote>
+    </figure>
+  </marquee>
+
+  <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+  <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+</div> -->
+
+
