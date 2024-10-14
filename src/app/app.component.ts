@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { NgxSonnerToaster } from 'ngx-sonner';
 import { AuthStateService } from './services/data-access/auth-state.service';
-
+import * as AOS from 'aos';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -20,5 +20,7 @@ export class AppComponent {
     await this._auth.logOut();
     this.router.navigateByUrl('/auth/login');
   }
-
+  ngOnInit() {
+    AOS.init();
+  }
 }

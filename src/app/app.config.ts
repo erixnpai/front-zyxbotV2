@@ -7,6 +7,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 export const appConfig: ApplicationConfig = {
+  
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
@@ -23,4 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
   ],
+
+
+  
 };
