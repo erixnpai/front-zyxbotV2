@@ -4,20 +4,21 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    
     extend: {
-      animation: {
-        marquee: "marquee var(--duration) linear infinite",
-        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      animation:{
+        "loop-scroll": "loop-scroll 10s linear infinite",
+         "loop-scroll-reverse": "loop-scroll-reverse 10s linear infinite",
       },
-      keyframes: {
-        marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+      keyframes:{
+        "loop-scroll": {
+          from:{transform: "translateX(0)"},
+          to:{transform: "translateX(-100%)"}
         },
-        "marquee-vertical": {
-          from: { transform: "translateY(0)" },
-          to: { transform: "translateY(calc(-100% - var(--gap)))" },
-        },
+         "loop-scroll-reverse": {
+           from: { transform: "translateX(-100%)" },
+           to: { transform: "translateX(0)" },
+         },
       },
     },
   },
@@ -25,4 +26,3 @@ module.exports = {
     require('tailwindcss-animated')
   ],
 }
-

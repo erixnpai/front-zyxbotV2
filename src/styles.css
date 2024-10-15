@@ -24,3 +24,9 @@ body{
     @apply text-[#F6B93E]
 }
 
+
+.paused{
+    animation-play-state: paused;
+}
+
+
