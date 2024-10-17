@@ -1,169 +1,117 @@
-<body
-    class="flex flex-col md:flex-row bg-[#212121] md:overflow-y-hidden md:overflow-x-hidden 
-    w-[100dhv] h-[100dvh] overflow-y-auto"
-  >
-    <header>
-
-      <!-- responsive mobile -->
-      <nav
-        class="flex items-center justify-between w-full h-auto pl-3 pr-3 bg-transparent border-y-[1px] border-gray-600 md:hidden"
-      >
-        <div id="nav-list" class="text-white">
+<aside class="flex h-screen overflow-hidden">
+  <div 
+    [ngClass]="{
+      'fixed z-40 top-0 left-0 w-full h-full bg-black opacity-30': expanded && isMobileScreen,
+      'hidden': !expanded || !isMobileScreen
+    }" 
+    class="transition-opacity duration-300"></div>
+    
+  <nav [ngClass]="{
+    'hidden': !expanded, 
+    'block': expanded ,
+    'fixed z-50 top-0 left-0 w-64 h-full': isMobileScreen 
+  }" class="transition-all h-full flex flex-col bg-[#171717] shadow-sm ">
+    <div class="p-6 mt-2 pb-2 flex justify-between items-center">
+      <button (click)="toggleSidebar()" class="p-2">
+        <ng-container>
           <i class="fa-solid fa-bars text-white"></i>
-        </div>
+        </ng-container>
+      </button>
+      <img routerLink="/chat" src="/assets/logoZyxbotPositivo.png" class=" cursor-pointer overflow-hidden transition-all"
+        [ngClass]="expanded ? 'w-36' : 'w-0'" alt="" />
+    </div>
 
-        <section>
-          <div class="px-4 py-4 flex justify-between items-center bg-transparent">
-            <h1 class="flex items-center text-lg font-semibold text-white gap-2">
-              Chatbot
-              <i class="fa-solid fa-angle-down text-white"></i>
-            </h1>
-          </div>
-      
-        </section>
+    <ul class="flex-1 px-3">
 
-        <div class="flex items-center justify-start flex-row-reverse">
-          <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-              <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
-          </div>
-          <div class="relative mr-3 text-sm ">
-            <div class="text-white">{{user}}</div>
-          </div>
-        </div>
-      </nav>
+      <div class="relative flex items-center mb-2 mt-4 md:mt-4" [ngClass]="expanded ? 'visible' : 'hidden'">
+        <span class="absolute">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-5 h-5 mx-3 text-black">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </span>
+        <input type="text" placeholder="Buscar"
+          class="block w-full py-1.5 pr-5 text-gray-900 bg-white border border-gray-900 rounded-lg md:w-80 placeholder-gray-400/70 pl-11 rtl:pr-11 rtl:pl-5 focus:border-white focus:ring-white focus:outline-none focus:ring focus:ring-opacity-40">
+      </div>
 
-      <!-- Sidebar pc -->
-      <nav
-        class="hidden md:block md:w-1/4 bg-[#171717] lg:w-1/5 xl:w-1/4 2xl:w-1/4"
-      >
-        <div
-          class="h-screen bg-[#171717] px-3 py-[14px] w-[35vw] xl:w-[19.03367496339678vw] flex flex-col justify-between"
+      <div 
+        class=" hover:bg-[#212121] text-white relative flex items-center py-2 px-3 my-1 rounded-md cursor-pointer transition-colors group duration-300 ease-in-out sm:text-sm sm:py-2"
         >
-          <div class="flex flex-col">
-            <div
-              class="flex items-center justify-between px-2 py-2 rounded-lg hover:bg-[#212121] cursor-pointer"
-            >
-              <div class="flex items-center">
-                <button
-                  class="flex items-center justify-center mr-2 w-7 h-7"
-                >
-                <i class="fa-solid fa-bars text-white"></i>
-                </button>
-                
-              </div>
-              <img src="/assets/logoZyxbotPositivo.png" class="h-6 mr-3 sm:h-9" alt="">
-            </div>
+        <img src="assets/Test.png" class="w-[22px] h-[22px]" alt="">
+        <h2 class="overflow-hidden font-medium transition-all ml-3 ">Test Vocacional
+        </h2>
+      </div>
 
-            <div class="relative flex items-center mt-4 md:mt-4">
-              <span class="absolute">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mx-3 text-black">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-              </span>
-              <input type="text" placeholder="Buscar" 
-              class="block w-full py-1.5 pr-5 text-gray-900  bg-white border border-gray-900 rounded-lg md:w-80 placeholder-gray-400/70 pl-11 rtl:pr-11 rtl:pl-5 600 focus:border-white  focus:ring-white focus:outline-none focus:ring focus:ring-opacity-40">
-            </div>
+      <div 
+        class=" hover:bg-[#212121] text-white relative flex items-center py-2 px-3 my-1 rounded-md cursor-pointer transition-colors group duration-300 ease-in-out sm:text-sm sm:py-2"
+        >
+        <img src="assets/Mapa.png" class="w-[22px] h-[22px]" alt="">
+        <h2 class="overflow-hidden font-medium transition-all ml-3 ">Mapa Interactivo
+        </h2>
+      </div>
 
-            <div class="text-xs font-medium text-[#676767]">
-          
-              
-              <div class="cursor-pointer  rounded-md text-white flex items-center space-x-2 w-full py-2 px-4 mt-2 font-medium  duration-300 ease-in-out hover:bg-[#212121] sm:text-sm sm:py-2 "
-              >
-              <img src="assets/Mapa.png" class="w-[22px] h-[22px]" alt="">
-              <h2 class="truncate">Mapa Interactivo</h2>  
-              </div>
-
-              <div class="cursor-pointer  rounded-md text-white flex items-center space-x-2 w-full py-2 px-4 mt-2 font-medium  duration-300 ease-in-out hover:bg-[#212121] sm:text-sm sm:py-2 "
-              >
-              <img src="assets/Test.png" class="w-[22px] h-[22px]" alt="">
-                
-              <h2 class="truncate">Test Vocacional</h2>  
-              </div>
-                
-            </div>
-
-            <div class="text-xs font-medium text-[#676767]">
-              <div>
-                <h1 class="px-2 pt-2 pb-2">Universidades</h1>
-              </div>
-
-              <div
-                class="p-2 text-xs font-medium text-white hover:bg-[#212121] rounded-lg flex justify-between items-center cursor-pointer group"
-              >
-                <h2 routerLink="chatunan" class="truncate ">Universidad Nacional Autónoma de Nicaragua</h2>
-                <div class="flex items-center gap-2">
-                  <div class="hidden group-hover:block">
-                    <i class="fa-solid fa-bars text-white"></i>
-                  </div>
-                  <div class="hidden group-hover:block">
-                    <i class="fa-solid fa-bars text-white"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="p-2 text-xs font-medium text-white hover:bg-[#212121] rounded-lg flex justify-between items-center cursor-pointer group"
-              >
-                <h2 class="truncate ">Universidad Nacional Casimiro Sotelo 
-                  Montenegro</h2>
-                <div class="flex items-center gap-2">
-                  <div class="hidden group-hover:block">
-                    <i class="fa-solid fa-bars text-white"></i>
-                  </div>
-                  <div class="hidden group-hover:block">
-                    <i class="fa-solid fa-bars text-white"></i>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="p-2 text-xs font-medium text-white hover:bg-[#212121] rounded-lg flex justify-between items-center cursor-pointer group"
-              >
-                <h2 class="truncate ">Universidad Nacional de Ingeniería</h2>
-                <div class="flex items-center gap-2">
-                  <div class="hidden group-hover:block">
-                    <i class="fa-solid fa-bars text-white"></i>
-                  </div>
-                  <div class="hidden group-hover:block">
-                    <i class="fa-solid fa-bars text-white"></i>
-                  </div>
-                </div>
-              </div>
-              
-              
-            </div>
-          </div>
-
-          <div class="flex flex-col justify-center">
-            <div class="flex flex-col justify-center">
-              <div
-                class="flex items-center justify-center gap-2 Upgrade-plan py-[10px] pl-2 hover:bg-[#2F2F2F] w-auto rounded-xl cursor-pointer"
-              >
-              <i class="fa-solid fa-right-from-bracket text-white"></i>
-                <div>
-                  <button (click)="CerrarSesion()">
-                    <h1 class="text-sm font-medium text-white">Cerrar Sesión</h1>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="text-xs font-medium text-[#676767]">
+        <div>
+          <h1 class="px-2 pt-2 pb-2">Universidades</h1>
         </div>
-      </nav>
-    </header>
 
-    <!-- chat header -->
-    <main
-      class="relative hidden md:block md:w-[85%] bg-[#212121] lg:w-[85%] xl:w-[85%] 2xl:w-[85%] container mx-auto shadow-lg rounded-lg"
-    >
+        <div
+        routerLink="chatunan"
+          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group"
+        >
+        <i class="fa-solid fa-building-columns"></i>
+          <h2  class="truncate ml-3">Universidad Nacional Autónoma de Nicaragua</h2>
+        </div>
+
+        <div
+        routerLink="chatunan"
+          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group"
+        >
+        <i class="fa-solid fa-building-columns"></i>
+          <h2  class="truncate ml-3">Universidad Nacional Casimiro Sotelo 
+            Montenegro</h2>
+        </div>
+
+        <div
+        routerLink="chatunan"
+          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group"
+        >
+        <i class="fa-solid fa-building-columns"></i>
+          <h2  class="truncate ml-3">Universidad Nacional de Ingeniería</h2>
+        </div>       
+      </div>
+    </ul>
+
+
+    <a
+      class="flex items-center justify-center gap-2 Upgrade-plan py-[10px] pl-2 hover:bg-[#2F2F2F] w-auto rounded-xl cursor-pointer">
+
+      <i class="fa-solid fa-right-from-bracket text-white"></i>
+      <div class="flex justify-between items-center overflow-hidden transition-all"
+        [ngClass]="expanded ? 'w-52 ml-3' : 'w-0'">
+        <div class="leading-4">
+          <button (click)="CerrarSesion()">
+            <h1 class="text-sm font-medium text-white">Cerrar Sesión</h1>
+          </button>
+        </div>
+      </div>
+    </a>
+  </nav>
+
+
+  <main class="relative w-full h-full bg-[#212121] container-fluid mx-0 shadow-lg ">
     <div class="px-2 py-2 flex justify-between items-center bg-[#1E1E1E]">
+      <button (click)="toggleSidebar()" *ngIf="!expanded" class="ml-4">
+        <i class="fa-solid fa-bars text-white"></i>
+    </button >
       <h1 class="flex items-center text-lg font-semibold text-white gap-2">
         Chatbot
         <i class="fa-solid fa-angle-down text-white"></i>
       </h1>
       <div class="flex items-center justify-start flex-row-reverse">
         <div class="flex items-center justify-center h-10 w-10 rounded-full flex-shrink-0">
-            <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
+          <img [src]="userPhotoURL" alt="Foto de perfil del usuario" class="object-cover h-8 w-8 rounded-full" />
         </div>
         <div class="relative mr-3 text-sm ">
           <div class="text-white">{{user}}</div>
@@ -171,15 +119,8 @@
       </div>
     </div>
 
-<!-- chat cuerpo -->
-<router-outlet></router-outlet>
-    </main>
-
-    <main
-      class="md:hidden md:w-[85%] bg-[#212121] lg:w-[85%] xl:w-[85%] 2xl:w-[85%] container mx-auto shadow-lg rounded-lg"
-    >
-      
     <router-outlet></router-outlet>
-    </main>
-    <!-- <script src="chat-gpt.js"></script> -->
-  </body>
+  </main>
+
+
+</aside>
