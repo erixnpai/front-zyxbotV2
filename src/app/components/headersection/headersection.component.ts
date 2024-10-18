@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -13,7 +14,7 @@ interface Review {
 @Component({
   selector: 'app-headersection',
   standalone: true,
-  imports: [CommonModule, ],
+  imports: [CommonModule, RouterLink],
   templateUrl: './headersection.component.html',
   styleUrl: './headersection.component.css'
 })
