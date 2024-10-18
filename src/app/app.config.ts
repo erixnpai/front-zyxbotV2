@@ -9,6 +9,7 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 // const config: SocketIoConfig = { url: 'http://localhost:3000/ollama', options: {} };
 export const appConfig: ApplicationConfig = {
+  
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
@@ -26,4 +27,7 @@ export const appConfig: ApplicationConfig = {
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
   ],
+
+
+  
 };

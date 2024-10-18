@@ -8,6 +8,16 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/homepage/homepage.component'),
     },
     {
+        path: 'mapa',
+        title: 'Mapa',
+        loadComponent: () => import('./pages/mapainteractivo/mapainteractivo.component'),
+    },
+    {
+        path: 'test',
+        title: 'testvocacional',
+        loadComponent: () => import('./pages/testvocacional/testvocacional.component'),
+    },
+    {
         canActivateChild: [publicGuard()],
         path: 'auth',
         loadChildren: () => import('./auth/auth.routes')
