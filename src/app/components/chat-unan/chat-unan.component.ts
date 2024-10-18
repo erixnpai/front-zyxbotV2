@@ -26,6 +26,9 @@ export default class ChatUnanComponent {
   messages: any[] = [];
   resp: any;
 
+
+  historyChat: any;
+
   private _auth = inject(AuthStateService);
 
   constructor(
@@ -33,28 +36,38 @@ export default class ChatUnanComponent {
     private router: Router,
     private srvchat: ChatService
   ) {
+    srvchat.connectToServer("");
     this.CargardatoUser();
   }
 
   ngOnInit(): void {
     // Suscribirse a los mensajes del servidor
     this.srvchat.getMessage().subscribe((message: any) => {
-      console.log(message);
+      let mess = message.message;
+      console.log(mess);
 
-      this.resp += message.message;
+      // Verificar el último elemento del arreglo de mensajes
+      if (this.messages.length > 0) {
+        let lastMessage = this.messages[this.messages.length - 1];
 
-      console.log(this.resp);
-
-      if ((message.end == true)) {
-        console.log("finaaaaaaaaaaaal");
+        console.log(" el ultimo mensaje?", lastMessage);
         
-        // this.messages.push({ text: this.resp, isUser: false });
-        this.resp = '';
-      }
 
-      // this.messages.push({ text: this.resp, isUser: false }); // Añade la respuesta del servidor
+        if (lastMessage.isUser) {
 
-      this.messages[this.messages.length - 1] = { text: this.resp, isUser: false };
+          this.messages.push({ text: this.message, isUser: false });
+
+          console.log("entro?");
+          // Si el último mensaje es de un usuario, agregar un nuevo mensaje
+          this.messages[this.messages.length - 1].text += mess;
+        } else {
+          // Si el último mensaje es del servidor, agregar un nuevo mensaje
+          this.messages[this.messages.length - 1].text += mess;
+        }
+      } 
+
+      console.log(this.messages);
+      
     });
   }
 
