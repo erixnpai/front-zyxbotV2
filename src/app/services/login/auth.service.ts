@@ -13,20 +13,26 @@ export class LoginService {
 
   // constructor() { }
 
-  register(user: User){
-    return createUserWithEmailAndPassword(
+  register(user: User){ 
+    let resp = createUserWithEmailAndPassword(
       this._auth,
       user.email,
       user.password
     )
+
+    console.log( resp, "para firebaseeeeeee");
+    
+    return resp;
   }
 
   login(user: User){
-    return signInWithEmailAndPassword(
+
+    let resp = signInWithEmailAndPassword(
       this._auth,
       user.email,
       user.password
     )
+    return resp;
   }
 
   signGoogle(){

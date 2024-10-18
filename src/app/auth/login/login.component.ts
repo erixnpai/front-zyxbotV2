@@ -48,7 +48,7 @@ export default class LoginComponent {
         this.router.navigate(['/chat/']);  // Redirige solo si la autenticación es exitosa.
       } else {
         throw new Error('No se pudo completar la autenticación');
-      }
+      } 
     } catch (error) {
       toast.error('Error al autenticar con Google');
     }

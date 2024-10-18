@@ -19,7 +19,7 @@
           <img src="assets/ImagotipoZyxbotNegativo.png" alt="User Avatar" class="w-6 h-6 rounded-full">
         </div>
         <div class="text-white rounded-lg p-3 flex-grow max-w-full break-words">
-          <p class="text-sm">{{ msg.text }}</p>
+          <p class="text-sm" [innerHTML]="msg.text"></p>
         </div>
       </div>
     </div>

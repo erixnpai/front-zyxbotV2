@@ -15,7 +15,7 @@ export class ChatService {
   }
 
   connectToServer(url: string) {
-    this.socketServer = io('http://localhost:3000/ollama' + url, { autoConnect: false });
+    this.socketServer = io('http://localhost:3000' + url, { autoConnect: false });
     this.socketServer.on('connect', () => { 
       console.log('Conectado al servidor');
     });
