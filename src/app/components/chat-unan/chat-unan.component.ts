@@ -45,7 +45,6 @@ export default class ChatUnanComponent {
     this.srvchat.getMessage().subscribe((message: any) => {
       let mess = message.message;
       mess = mess.replace(/\n/g, '<br>');
-      // Reemplazar los ** por <strong>
       mess = mess.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
       console.log(mess);
 
