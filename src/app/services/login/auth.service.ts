@@ -35,10 +35,11 @@ export class LoginService {
     return resp;
   }
 
-  signGoogle(){
+  signGoogle(): any{
     const provider = new GoogleAuthProvider()
    // provider.setCustomParameters({prompt: 'select_account'}) // ESTO ES OPCIONAL YA QUE SIRVE PARA FORZAR PARA A ELEGIR UNA CUENTA DE GOOGLE
-    return signInWithPopup(this._auth, provider)
+   let resp = signInWithPopup(this._auth, provider);
+    return resp
   }
 
   // ESTA FUNCION ES PARA TRAER LAS IMAGENES LOGUEADA POR USUARIO

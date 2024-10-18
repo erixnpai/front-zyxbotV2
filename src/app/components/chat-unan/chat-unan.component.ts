@@ -83,6 +83,7 @@ export default class ChatUnanComponent {
       this.message = ''; // Limpiar el input
     }
   }
+  
 
   async CargardatoUser() {
     try {
