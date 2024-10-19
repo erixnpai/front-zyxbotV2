@@ -1,72 +1,58 @@
+import { CommonModule, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import * as L from 'leaflet'; 
+import * as L from 'leaflet';
 
 @Component({
   selector: 'app-mapainteractivosection',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, NgIf],
   templateUrl: './mapainteractivosection.component.html',
   styleUrls: ['./mapainteractivosection.component.css']
 })
 export default class MapainteractivosectionComponent {
-  private map: L.Map | undefined;
+  private map: L.Map  | undefined;
   private userMarker: L.Marker<any> | undefined;
+  mostrarMapa: boolean = false;
 
-  ngOnInit(): void {
+  // constructor(public dialog: MatDialog) { }
+
+  ngAfterViewInit(): void {
     this.initMap();
   }
 
-  coordenadasPorId: { [key: string]: [number, number] } = {
-    '1': [34.0522, -118.2437], // Ejemplo: Los Ángeles
-    '2': [40.7128, -74.0060],  // Ejemplo: Nueva York
-    '3': [51.5074, -0.1278],   // Ejemplo: Londres
-    // Agrega más coordenadas según necesites
-  };
-
   private initMap(): void {
-    // Verifica que el contenedor 'map' existe en el DOM
-    const mapContainer = document.getElementById('map');
-    if (!mapContainer) {
-      console.error("Map container not found");
-      return;
-    }
-
-    // Inicializa el mapa solo si el contenedor existe
-    this.map = L.map('map').setView([12.13649335, 86.2240367845234], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-    }).addTo(this.map);
-  }
-
-   // Esta función muestra el valor del ID del elemento ancla que fue clickeado
-   showAnchorId(event: MouseEvent): void {
-    // Obtener el elemento clickeado (ancla)
-    const target = event.target as HTMLElement;
-
-    // Obtener el atributo ID del elemento clickeado
-    const anchorId = target.id;
-
-    // Mostrar el ID en la consola o donde prefieras
-    console.log('ID del ancla:', anchorId);
-  }
-
-  toggleLeaflet() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const coords: [number, number] = [position.coords.latitude, position.coords.longitude];
-
-        if (this.userMarker) {
-          this.userMarker.setLatLng(coords);
-        } else {
-          this.userMarker = L.marker(coords).addTo(this.map!)
-            .bindPopup('You are here')
-            .openPopup();
-        }
-      }, () => {
-        alert("Location not found");
+    const container = document.getElementById('map'); // Verifica si el contenedor existe
+    if (container) {
+      this.map = L.map('map', {
+        center: [14.3392053, -83.8790622], // Ajusta las coordenadas según lo necesario
+        zoom: 13
       });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(this.map);
     } else {
-      alert("Geolocation is not supported by this browser.");
+      console.error('Map container not found');
     }
   }
+
+  toggleMapa(): void {
+    const mapContainer = document.getElementById('map');
+    if (mapContainer) {
+      mapContainer.style.display = mapContainer.style.display === 'none' ? 'block' : 'none';
+    }
+  }
+
+    // getLocations() {
+    //   if(navigator.geolocation){
+    //     navigator.geolocation.getCurrentPosition((position) => {
+    //       const { latitude, longitude } = position.coords;
+    //       this.map.setView([latitude, longitude], 13);
+    //       if (this.userMarker) {
+    //         this.map.removeLayer(this.userMarker);
+    //       }
+    //       this.userMarker = L.marker([latitude, longitude]).addTo(this.map);
+    //     });
+    //   }
+    // }
 }
