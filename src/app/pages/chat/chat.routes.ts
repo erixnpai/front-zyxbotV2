@@ -15,17 +15,17 @@ export default [
     {
         path: 'chatuncsm',
         title: 'Chat Casimiro Sotelo',
-        loadComponent: () => import('../../components/chat-unan/chat-unan.component')
+        loadComponent: () => import('../../components/chat-uncsm/chat-uncsm.component')
     },
     {
         path: 'chatcurmat',
         title: 'Chat UNAN-CUR Matagalpa',
-        loadComponent: () => import('../../components/chat-unan/chat-unan.component')
+        loadComponent: () => import('../../components/chat-curmat/chat-curmat.component')
     },
-    {
-        path: 'chatuncsm',
-        title: 'Chat Casimiro Sotelo',
-        loadComponent: () => import('../../components/chat-unan/chat-unan.component')
-    }
+    // {
+    //     path: 'chatuncsm',
+    //     title: 'Chat Casimiro Sotelo',
+    //     loadComponent: () => import('../../components/chat-unan/chat-unan.component')
+    // }
 
 ] as Routes
