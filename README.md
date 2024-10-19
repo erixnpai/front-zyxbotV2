@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  <img src="url de imagen">
+  <img src="https://github.com/erixnpai/front-zyxbotV2/blob/main/Banner-de-facebook-zyxbot.png">
 </p>
 
 <table>
@@ -37,10 +37,10 @@
 <table>
   <tr>
     <td width="50%">
-      <img src="url de imagen" alt="Imagen de ZyxBot">
+      <img src="https://github.com/erixnpai/front-zyxbotV2/blob/main/Compu%203.png" alt="Imagen de ZyxBot">
     </td>
     <td width="50%">
-      <img src="url de imagen" alt="Imagen de ZyxBot">
+      <img src="https://github.com/erixnpai/front-zyxbotV2/blob/main/Compu%204.png" alt="Imagen de ZyxBot">
     </td>
   </tr>
 </table>
