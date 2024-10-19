@@ -42,7 +42,10 @@ export default class ChatComponent {
 
   async CerrarSesion() {
     await this._auth.logOut();
+
+    sessionStorage.clear()
     this.router.navigateByUrl('/auth/login');
+    
   }
 
   toggleSidebar() {
@@ -57,6 +60,7 @@ export default class ChatComponent {
       // toast.success('carga en usuario');
 
       // Obtén la URL de la foto del usuario
+      // kaskfdskfdfl
 
       console.log("Imagen del usuario", this.userPhotoURL);
       // console.log("Imagen del usuario", this.user);
