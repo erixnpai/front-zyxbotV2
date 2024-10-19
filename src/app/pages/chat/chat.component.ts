@@ -59,6 +59,7 @@ export default class ChatComponent {
       // toast.success('carga en usuario');
 
       // Obtén la URL de la foto del usuario
+      // kaskfdskfdfl
 
       console.log("Imagen del usuario", this.userPhotoURL);
       // console.log("Imagen del usuario", this.user);
