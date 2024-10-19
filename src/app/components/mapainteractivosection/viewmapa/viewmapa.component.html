@@ -1,1 +1,31 @@
-<div id="map" style="height: 100vh;"></div>
+
+<div class=" mt-6 text-white px-4 py-2 flex justify-center items-center text-center">
+  <h2 class="flex justify-center items-center text-lg font-medium uppercase text-center text-black underline">UNIVERSIDADES</h2>
+</div>
+
+
+
+<div class="grid gap-4 lg:grid-cols-2 mb-6 mt-4">
+    <div>
+      <label for="apellidos" class="block text-sm font-medium text-gray-900">Instituciones</label>
+      <input matInput id="apellidos" formControlName="Apellidos" placeholder="Instituciones" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+        
+  </div>
+    <div >
+        <label for="nombres" class="block text-sm font-medium text-gray-900">Sedes</label>
+        <input matInput id="nombres" formControlName="Nombres"  placeholder="Sedes" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+       
+      </div>
+</div>
+
+<div id="map" style="height: 70vh;"></div>
+<div class="flex justify-end items-end space-x-4 mt-4">
+  <!-- botón de cancelar -->
+  <button
+  (click)="cerraDialogo()"
+    class="rounded bg-[#0B0F1D] px-4 pb-1.5 pt-1.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-[#253055] hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]">
+    <span class="mx-0.5">Cerrar</span>
+  </button>
+  
+  
+</div>

@@ -56,8 +56,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -74,8 +74,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -92,8 +92,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -111,8 +111,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -130,8 +130,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -149,8 +149,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -168,8 +168,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -187,8 +187,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -206,8 +206,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -225,8 +225,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -244,8 +244,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -263,8 +263,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -282,8 +282,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -301,8 +301,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -320,8 +320,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -339,8 +339,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   
@@ -358,8 +358,8 @@ export default class MapainteractivosectionComponent {
   
         // Abrimos el diálogo y pasamos los datos
         dialogref = this.dialog.open(ViewmapaComponent, {
-          height: '1000px',
-          minWidth: '1000px',
+          height: '900px',
+          minWidth: '900px',
           data: { lat, long }
         });
   

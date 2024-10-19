@@ -1,5 +1,5 @@
 import { Component, Inject, InjectionToken } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import * as L from 'leaflet';
 
 @Component({
@@ -13,7 +13,7 @@ export default class ViewmapaComponent {
   private map: L.Map | undefined;
 
  
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { lat: number, long: number }) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { lat: number, long: number }, private dialogRef: MatDialogRef<ViewmapaComponent>) {}
 
   // Hacemos pública esta función para llamarla desde el diálogo
   public initMap(lat: number, lng: number): void {
@@ -31,5 +31,8 @@ export default class ViewmapaComponent {
       console.error('Map container not found');
     }
   }
+  cerraDialogo() {
+    this.dialogRef.close();
+   }
   }
 
