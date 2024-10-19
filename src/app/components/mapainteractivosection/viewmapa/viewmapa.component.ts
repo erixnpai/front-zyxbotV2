@@ -15,6 +15,7 @@ export default class ViewmapaComponent {
   private map: L.Map | undefined;
   public form: FormGroup | undefined;
 
+
   // Arreglo de instituciones
   public instituciones = [
     { id: '0', nombre: 'Seleccione', siglas: 'CNU' },
@@ -61,33 +62,62 @@ export default class ViewmapaComponent {
     { id: '51', nombre: 'Universidad Técnica de Comercio', siglas: 'UTC' },
     { id: '52', nombre: 'Universidad Nacional Casimiro Sotelo Montenegro', siglas: 'UNCSM' },
     { id: '53', nombre: 'Universidad American College', siglas: 'UAC' },
-    { id: '56', nombre: 'Federación de Sindicatos de Trabajadores Universitarios de Nicaragua', siglas: 'FESITUN' },
-    { id: '57', nombre: 'Federación de Profesionales Docentes de la Educación Superior', siglas: 'FEPDES' },
-    { id: '58', nombre: 'Unión Nacional de Estudiantes de Nicaragua', siglas: 'UNEN' }
   ];
 
-  Sedes = [
-    { id: '1', nombre: 'Consejo Nacional de Universidades', siglas: 'CNU', lat: 12.136, lng: -86.251 },
-    { id: '2', nombre: 'Universidad Nacional Autónoma de Nicaragua, Managua', siglas: 'UNAN-Managua', lat: 12.134, lng: -86.249 },
-    { id: '3', nombre: 'Universidad Nacional Autónoma de Nicaragua, León', siglas: 'UNAN-León', lat: 12.430, lng: -86.878 },
-    { id: '4', nombre: 'Universidad Nacional Agraría', siglas: 'UNA', lat: 12.136, lng: -86.254 },
-    { id: '5', nombre: 'Universidad Nacional de Ingeniería', siglas: 'UNI', lat: 12.145, lng: -86.242 },
-    { id: '6', nombre: 'Universidad Internacional Antonio de Valdivieso', siglas: 'UNIAV', lat: 12.133, lng: -86.257 },
-    { id: '7', nombre: 'Bluefields Indian & Caribbean University', siglas: 'BICU', lat: 12.009, lng: -83.767 },
-    { id: '8', nombre: 'Universidad de las Regiones Autónomas de la Costa Caribe Nicaragüense', siglas: 'URACCAN', lat: 12.007, lng: -83.779 },
-    { id: '9', nombre: 'Universidad Nacional Francisco Luis Espinoza Pineda', siglas: 'UNFLEP', lat: 12.161, lng: -86.097 },
-    { id: '10', nombre: 'Universidad Nacional Politécnica', siglas: 'UNP', lat: 12.128, lng: -86.258 },
+  sedes = [
+    { id: '0', idIES: '0', nombre: 'Seleccione' },
+    { id: '1', idIES: '1', nombre: 'Consejo Nacional de Universidades', siglas: 'CNU', lat: 12.136, lng: -86.251 },
+    { id: '2', idIES: '2', nombre: 'Universidad Nacional Autónoma de Nicaragua, Managua', siglas: 'UNAN-Managua', lat: 12.134, lng: -86.249 },
+    { id: '3', idIES: '3', nombre: 'Universidad Nacional Autónoma de Nicaragua, León', siglas: 'UNAN-León', lat: 12.430, lng: -86.878 },
+    { id: '4', idIES: '4', nombre: 'Universidad Nacional Agraría', siglas: 'UNA', lat: 12.136, lng: -86.254 },
+    { id: '5', idIES: '5', nombre: 'Universidad Nacional de Ingeniería', siglas: 'UNI', lat: 12.145, lng: -86.242 },
+    { id: '6', idIES: '6', nombre: 'Universidad Internacional Antonio de Valdivieso', siglas: 'UNIAV', lat: 12.133, lng: -86.257 },
+    { id: '7', idIES: '7', nombre: 'Bluefields Indian & Caribbean University', siglas: 'BICU', lat: 12.009, lng: -83.767 },
+    { id: '8', idIES: '8', nombre: 'Universidad de las Regiones Autónomas de la Costa Caribe Nicaragüense', siglas: 'URACCAN', lat: 12.007, lng: -83.779 },
+    { id: '9', idIES: '9', nombre: 'Universidad Nacional Francisco Luis Espinoza Pineda', siglas: 'UNFLEP', lat: 12.161, lng: -86.097 },
+    { id: '10', idIES: '10', nombre: 'Universidad Nacional Politécnica', siglas: 'UNP', lat: 12.128, lng: -86.258 },
     // Añadir el resto de instituciones con sus respectivas coordenadas
   ];
 
+  filteredSedes = this.sedes;
  
   constructor(@Inject(MAT_DIALOG_DATA) public data: { lat: number, long: number }, private dialogRef: MatDialogRef<ViewmapaComponent>, private fb: FormBuilder
 ) {
   this.form = this.fb.group({
     Apellidos: [''],
     Nombres: [''],
-    Institucion: [''] // Añade el control para la institución
+    Institucion: [''], // Campo para la institución
+    Sede: [''], // Campo para la sede
   });
+
+  // Escucha los cambios en la institución seleccionada
+  this.form.get('Institucion')?.valueChanges.subscribe((selectedInstitutionId) => {
+    this.filterSedes(selectedInstitutionId);
+  });
+
+    // Escucha los cambios en la sede seleccionada
+    this.form.get('Sede')?.valueChanges.subscribe((selectedSedeId) => {
+      this.centrarMapaEnSede(selectedSedeId);
+    });
+}
+
+
+
+// Método para filtrar las sedes según la institución seleccionada
+filterSedes(selectedInstitutionId: string): void {
+  if (selectedInstitutionId) {
+    this.filteredSedes = this.sedes.filter((sede) => sede.idIES === selectedInstitutionId);
+  } else {
+    this.filteredSedes = this.sedes; // Si no hay selección, muestra todas las sedes
+  }
+}
+
+centrarMapaEnSede(selectedSedeId: string): void {
+  const sede = this.sedes.find(sede => sede.id === selectedSedeId);
+  if (sede && this.map && sede.lat !== undefined && sede.lng !== undefined) {
+    this.map.setView([sede.lat, sede.lng], 14); // Centra el mapa en la sede seleccionada
+    L.marker([sede.lat, sede.lng]).addTo(this.map).bindPopup(`<b>${sede.nombre}</b>`).openPopup(); // Agrega un marcador en la sede
+  }
 }
 
   // Hacemos pública esta función para llamarla desde el diálogo
@@ -96,12 +126,13 @@ export default class ViewmapaComponent {
     if (container) {
       this.map = L.map('map', {
         center: [lat, lng], // Usa los parámetros de latitud y longitud
-        zoom: 13
+        zoom: 11
       });
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(this.map);
+      
     } else {
       console.error('Map container not found');
     }
