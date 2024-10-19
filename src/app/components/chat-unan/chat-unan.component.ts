@@ -36,7 +36,7 @@ export default class ChatUnanComponent {
     private router: Router,
     private srvchat: ChatService
   ) {
-    srvchat.connectToServer("");
+    srvchat.connectToServer("/socket-unan-managua");
     this.CargardatoUser();
   }
 
@@ -44,25 +44,28 @@ export default class ChatUnanComponent {
     // Suscribirse a los mensajes del servidor
     this.srvchat.getMessage().subscribe((message: any) => {
       let mess = message.message;
+      mess = mess.replace(/\n/g, '<br>');
+      mess = mess.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
       console.log(mess);
 
       // Verificar el último elemento del arreglo de mensajes
       if (this.messages.length > 0) {
         let lastMessage = this.messages[this.messages.length - 1];
 
-        console.log(" el ultimo mensaje?", lastMessage);
+     
         
 
         if (lastMessage.isUser) {
 
           this.messages.push({ text: this.message, isUser: false });
 
-          console.log("entro?");
           // Si el último mensaje es de un usuario, agregar un nuevo mensaje
           this.messages[this.messages.length - 1].text += mess;
+          this.messages[this.messages.length - 1].text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         } else {
           // Si el último mensaje es del servidor, agregar un nuevo mensaje
           this.messages[this.messages.length - 1].text += mess;
+          this.messages[this.messages.length - 1].text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         }
       } 
 
@@ -80,6 +83,7 @@ export default class ChatUnanComponent {
       this.message = ''; // Limpiar el input
     }
   }
+  
 
   async CargardatoUser() {
     try {

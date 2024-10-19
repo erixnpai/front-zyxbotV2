@@ -16,6 +16,13 @@ export default class MapainteractivosectionComponent {
     this.initMap();
   }
 
+  coordenadasPorId: { [key: string]: [number, number] } = {
+    '1': [34.0522, -118.2437], // Ejemplo: Los Ángeles
+    '2': [40.7128, -74.0060],  // Ejemplo: Nueva York
+    '3': [51.5074, -0.1278],   // Ejemplo: Londres
+    // Agrega más coordenadas según necesites
+  };
+
   private initMap(): void {
     // Verifica que el contenedor 'map' existe en el DOM
     const mapContainer = document.getElementById('map');
@@ -29,6 +36,18 @@ export default class MapainteractivosectionComponent {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
     }).addTo(this.map);
+  }
+
+   // Esta función muestra el valor del ID del elemento ancla que fue clickeado
+   showAnchorId(event: MouseEvent): void {
+    // Obtener el elemento clickeado (ancla)
+    const target = event.target as HTMLElement;
+
+    // Obtener el atributo ID del elemento clickeado
+    const anchorId = target.id;
+
+    // Mostrar el ID en la consola o donde prefieras
+    console.log('ID del ancla:', anchorId);
   }
 
   toggleLeaflet() {

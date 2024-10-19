@@ -1,11 +1,9 @@
 <aside class="flex h-screen overflow-hidden">
-  <div 
-    [ngClass]="{
+  <div [ngClass]="{
       'fixed z-40 top-0 left-0 w-full h-full bg-black opacity-30': expanded && isMobileScreen,
       'hidden': !expanded || !isMobileScreen
-    }" 
-    class="transition-opacity duration-300"></div>
-    
+    }" class="transition-opacity duration-300"></div>
+
   <nav [ngClass]="{
     'hidden': !expanded, 
     'block': expanded ,
@@ -17,8 +15,8 @@
           <i class="fa-solid fa-bars text-white"></i>
         </ng-container>
       </button>
-      <img routerLink="/chat" src="/assets/logoZyxbotPositivo.png" class=" cursor-pointer overflow-hidden transition-all"
-        [ngClass]="expanded ? 'w-36' : 'w-0'" alt="" />
+      <img routerLink="/chat" src="/assets/logoZyxbotPositivo.png"
+        class=" cursor-pointer overflow-hidden transition-all" [ngClass]="expanded ? 'w-36' : 'w-0'" alt="" />
     </div>
 
     <ul class="flex-1 px-3">
@@ -35,17 +33,15 @@
           class="block w-full py-1.5 pr-5 text-gray-900 bg-white border border-gray-900 rounded-lg md:w-80 placeholder-gray-400/70 pl-11 rtl:pr-11 rtl:pl-5 focus:border-white focus:ring-white focus:outline-none focus:ring focus:ring-opacity-40">
       </div>
 
-      <div 
-        class=" hover:bg-[#212121] text-white relative flex items-center py-2 px-3 my-1 rounded-md cursor-pointer transition-colors group duration-300 ease-in-out sm:text-sm sm:py-2"
-        >
+      <div
+        class=" hover:bg-[#212121] text-white relative flex items-center py-2 px-3 my-1 rounded-md cursor-pointer transition-colors group duration-300 ease-in-out sm:text-sm sm:py-2">
         <img src="assets/Test.png" class="w-[22px] h-[22px]" alt="">
         <h2 class="overflow-hidden font-medium transition-all ml-3 ">Test Vocacional
         </h2>
       </div>
 
-      <div 
-        class=" hover:bg-[#212121] text-white relative flex items-center py-2 px-3 my-1 rounded-md cursor-pointer transition-colors group duration-300 ease-in-out sm:text-sm sm:py-2"
-        >
+      <div
+        class=" hover:bg-[#212121] text-white relative flex items-center py-2 px-3 my-1 rounded-md cursor-pointer transition-colors group duration-300 ease-in-out sm:text-sm sm:py-2">
         <img src="assets/Mapa.png" class="w-[22px] h-[22px]" alt="">
         <h2 class="overflow-hidden font-medium transition-all ml-3 ">Mapa Interactivo
         </h2>
@@ -56,30 +52,29 @@
           <h1 class="px-2 pt-2 pb-2">Universidades</h1>
         </div>
 
-        <div
-        routerLink="chatunan"
-          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group"
-        >
-        <i class="fa-solid fa-building-columns"></i>
-          <h2  class="truncate ml-3">Universidad Nacional Autónoma de Nicaragua</h2>
+        <div routerLink="chatunan"
+          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group">
+          <i class="fa-solid fa-building-columns"></i>
+          <h2 class="truncate ml-3">Universidad Nacional Autónoma de Nicaragua</h2>
         </div>
 
-        <div
-        routerLink="chatunan"
-          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group"
-        >
-        <i class="fa-solid fa-building-columns"></i>
-          <h2  class="truncate ml-3">Universidad Nacional Casimiro Sotelo 
+        <div routerLink="chatuncsm"
+          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group">
+          <i class="fa-solid fa-building-columns"></i>
+          <h2 class="truncate ml-3">Universidad Nacional Casimiro Sotelo
             Montenegro</h2>
         </div>
+        <div routerLink="chatcurmat"
+          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group">
+          <i class="fa-solid fa-building-columns"></i>
+          <h2 class="truncate ml-3">UNAN-CUR Matagalpa </h2>
+        </div>
 
-        <div
-        routerLink="chatunan"
-          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group"
-        >
-        <i class="fa-solid fa-building-columns"></i>
-          <h2  class="truncate ml-3">Universidad Nacional de Ingeniería</h2>
-        </div>       
+        <div routerLink="chatuncsm"
+          class=" text-xs font-medium text-white relative py-2 px-3 my-1 hover:bg-[#212121] rounded-lg flex items-center cursor-pointer group">
+          <i class="fa-solid fa-building-columns"></i>
+          <h2 class="truncate ml-3">Universidad Nacional de Ingeniería</h2>
+        </div>
       </div>
     </ul>
 
@@ -104,7 +99,7 @@
     <div class="px-2 py-2 flex justify-between items-center bg-[#1E1E1E]">
       <button (click)="toggleSidebar()" *ngIf="!expanded" class="ml-4">
         <i class="fa-solid fa-bars text-white"></i>
-    </button >
+      </button>
       <h1 class="flex items-center text-lg font-semibold text-white gap-2">
         Chatbot
         <i class="fa-solid fa-angle-down text-white"></i>

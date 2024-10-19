@@ -44,11 +44,17 @@ export default class LoginComponent {
       const result = await this.srvAuth.signGoogle(); // Asegúrate de que el método signGoogle retorna una promesa.
       
       if (result) {
+
+        // console.log(JSON.stringify(result), null, 2);
+        console.log(result.user.displayName);
+        console.log(result.user.email);
+        
+        
         toast.success('Usuario autenticado con Google');
         this.router.navigate(['/chat/']);  // Redirige solo si la autenticación es exitosa.
       } else {
         throw new Error('No se pudo completar la autenticación');
-      }
+      } 
     } catch (error) {
       toast.error('Error al autenticar con Google');
     }
