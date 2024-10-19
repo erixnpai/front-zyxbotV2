@@ -50,7 +50,7 @@ export default class LoginComponent {
 
         console.log(tok);
 
-        sessionStorage.setItem('token', tok);
+        sessionStorage.setItem('token', JSON.stringify(tok));
 
         // console.log(JSON.stringify(result), null, 2);
         console.log(result.user.displayName);

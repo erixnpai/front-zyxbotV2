@@ -42,6 +42,8 @@ export default class ChatComponent {
 
   async CerrarSesion() {
     await this._auth.logOut();
+
+    sessionStorage.clear()
     this.router.navigateByUrl('/auth/login');
   }
 
